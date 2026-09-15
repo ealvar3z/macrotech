@@ -1,0 +1,3 @@
+PASS: 2 pages; terms on final page; internal submission comment excluded.
+PASS: supplier names excluded.
+REACT DESKTOP SELF TEST PASSED

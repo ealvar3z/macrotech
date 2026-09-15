@@ -1,0 +1,61 @@
+MACROTECH 2026 TR CUSTOMER / CONTACT SOURCE ANALYSIS
+Read-only inspection completed 11 September 2026
+
+SOURCE INSPECTED
+- Workbook: 2026 TR
+- Spreadsheet ID: 1EO_bXeuM0X42nmMAzfVdaBFb1KyKQkq56Vmk6ukhCYY
+- Primary tab: MARK-UP
+- Customer field: J - COMPANY / CUSTOMER / TIN No.
+- Contact field: K - BUYER / EMAIL
+- No write operation was performed.
+
+STRUCTURE FINDINGS
+- The workbook contains 13 tabs. No visible tab is named Sources.
+- MARK-UP column J stores the company label or customer code.
+- MARK-UP column K stores buyer/contact text, often as Name <email>.
+- Despite the column J header mentioning TIN, the inspected rows do not provide
+  reliable separate legal-name, TIN, postal-address, telephone, or contact-role
+  fields.
+- Company and buyer values in MARK-UP J:K are manually entered. They are not
+  formulas.
+- Historical dropdown validation is global and has changed over time. It mixes
+  company abbreviations, full company names, aliases, and contact-style values.
+
+FORMULA DEPENDENCIES
+- The MARK-UP pricing formulas do not reference columns J or K.
+- Customer/company and buyer/contact therefore do not calculate the selling
+  price, VAT, landed cost, duty, markup, or quotation totals.
+- ACTUAL column J copies MARK-UP column J with a VLOOKUP.
+- ACTUAL column K copies MARK-UP column K with a VLOOKUP.
+- Therefore these fields matter for downstream identification/reporting, but
+  not for customer-facing price calculation.
+
+PILOT DIRECTORY SNAPSHOT
+- 64 distinct historical company labels/codes were found.
+- 122 company-associated contact records remain after email-based deduplication.
+- GNPK has multiple known contacts.
+- GNPD has multiple known contacts.
+- The exact raw contact wording is retained for Tracker-compatible output.
+
+SAFE AUTOCOMPLETE DESIGN
+1. Company remains editable so a new customer can still be entered.
+2. Typing a partial value such as GNP presents matching companies such as GNPD
+   and GNPK.
+3. After an exact company match, buyer suggestions are filtered to contacts
+   historically associated with that company.
+4. A single known contact can be filled automatically.
+5. When several contacts exist, the employee must choose the correct buyer for
+   that RFQ. The app does not guess based only on frequency.
+6. The selected raw values continue to map to Tracker columns J and K without
+   changing Macrotech formulas or formatting logic.
+
+FIELDS NOT YET SAFE TO AUTOFILL
+- Official legal company name
+- Billing or delivery address
+- TIN
+- Phone number
+- Buyer title/department
+
+These should be added only from an approved authoritative customer master, not
+inferred from historical quotation rows.
+

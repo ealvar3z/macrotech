@@ -1,0 +1,21 @@
+{
+  "name": "macrotech-approval-platform",
+  "private": true,
+  "version": "0.3.1-desktop-alpha.1",
+  "workspaces": [
+    "web",
+    "api",
+    "worker"
+  ],
+  "scripts": {
+    "build": "npm run build -w web && npm run build -w api && npm run build -w worker",
+    "typecheck": "npm run typecheck -w web && npm run typecheck -w api && npm run typecheck -w worker",
+    "test": "npm run test -w api && npm run test -w worker",
+    "preview:notifications": "node --import=tsx scripts/generate-notification-preview.mjs",
+    "clean": "npm run clean -w web && npm run clean -w api && npm run clean -w worker"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "npm@11.19.0"
+}

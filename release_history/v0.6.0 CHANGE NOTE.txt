@@ -1,0 +1,20 @@
+MACROTECH QUOTATION PLATFORM - v0.6.0 DEMO
+RESILIENT APPROVAL AND CEO DASHBOARD
+
+- Clickable employee dashboard status filters.
+- Prominent Open Approved PDF action; removed Save a Copy from the application.
+- Dedicated CEO and delegated-approver dashboards with role-specific navigation.
+- Atomic first-approver-wins behavior and visible approver/time state.
+- Internal employee comments and post-GRAND-TOTAL discount request/approval.
+- Approved discounts and internal notes are retained in Dummy Tracker Additional
+  Remarks without adding or overwriting calculated columns.
+- Persistent company/contact request, approval, deduplication, and autocomplete.
+- Firestore-shaped local data explorer plus Firebase Emulator/rules package.
+- Durable, allowlisted Gmail notification outbox. Email failure never blocks work.
+- Multiple approved Gmail sender identities use separate tokens and identity
+  verification; no platform role is tied to one mailbox.
+- Default CO SBM N/A, EUR currency, live online forex with source/time, and manual
+  rate fallback.
+
+No production deployment, production Firebase mutation, Gmail message, or live
+2026 Tracker write occurred while creating this release.

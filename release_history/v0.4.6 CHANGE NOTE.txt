@@ -1,0 +1,45 @@
+MACROTECH QUOTATION PLATFORM - v0.4.6 DEMO
+Baseline Cleanup and Release-Integrity Update
+
+THIS REMAINS A TEST/PILOT BUILD.
+No production deployment is performed by this package.
+The live 2026 Tracker remains read-only. The Dummy Tracker remains the only
+Google Sheet write target.
+
+CHANGES IN v0.4.6
+
+1. RELEASE VERSION ALIGNMENT
+- VERSION, the Python package, and the React package now report 0.4.6-demo.
+
+2. DASHBOARD RELEASE INTEGRITY
+- The included dashboard/dist is rebuilt from the exact React + TypeScript source
+  in this package.
+- Official MACROTECH logo assets are present in the compiled dashboard.
+- The offline self-test checks the compiled dashboard and logo asset.
+
+3. CANONICAL CUSTOMER TOTAL LABELS
+- App, customer web preview, and quotation PDF now use:
+  TOTAL VATABLE AMOUNT
+  VAT AMOUNT - 12%
+  GRAND TOTAL
+- Calculation logic is unchanged and continues to follow the existing Tracker and
+  quotation-template formula chain.
+
+4. DOCUMENTATION CORRECTIONS
+- Removed outdated statements describing a manual customer-price input.
+- Clarified that Supplier Pending is allowed while drafting, but complete pricing
+  is required before submission or PDF generation.
+- Clarified that Q Code/row identity mismatches remain blocking while post-write
+  formula/format response anomalies are warnings after a successful Dummy write.
+- Clarified that the Windows build downloads private local build toolchains and
+  rebuilds the dashboard; no preinstalled Python or Node.js is required.
+
+PRESERVED WITHOUT BUSINESS-LOGIC CHANGES
+- Automatic customer unit pricing and MARK-UP behavior.
+- 2026 Tracker read-only guard and Dummy-only writes.
+- CO SBM in Tracker column E.
+- Selected-supplier and repeated alternate-supplier rows.
+- Internal approval separate from customer PO acceptance.
+- Line- and quantity-level partial PO acceptance.
+- Customer-private supplier and costing data.
+- OFFER TERMS & CONDITIONS as the final PDF page.

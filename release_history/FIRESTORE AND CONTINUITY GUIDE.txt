@@ -1,0 +1,55 @@
+MACROTECH FIRESTORE AND BUSINESS CONTINUITY DESIGN - TEST/PILOT
+
+WHAT THE CEO WILL SEE
+The CEO Dashboard shows the same logical Firestore collections that production
+will use: quotations, users, directoryRequests, notificationOutbox, and auditEvents.
+The Windows pilot stores these collections locally so the screens can be tested
+without deploying or touching production. Firebase Emulator configuration and
+security rules are included for the next isolated integration test.
+
+HOW DATA IS STORED
+quotations/{draftId}
+  Customer/RFQ, employee owner, line items, private suppliers, revisions,
+  employee approval comments, discount request, approval decision, PDF metadata,
+  Dummy Tracker range, and customer PO acceptance.
+
+users/{uid}
+  Google/Firebase identity, active flag, and role: EMPLOYEE, APPROVER, CEO, ADMIN.
+  Authorization is based on role claims and optional approved company domains,
+  never on one hard-coded Gmail address.
+
+directoryRequests/{requestId}
+  New-company or new-contact request, requester, status, decision, approver, and
+  timestamps. Approved entries become shared autocomplete data.
+
+notificationOutbox/{eventId}
+  Durable approval-notification jobs. A failed Gmail sender changes only the
+  notification status to FAILED; it never changes or blocks the quotation.
+
+auditEvents/{eventId}
+  Append-only actions such as submission, approval, discount decision, contact
+  approval, PDF generation, Tracker write, and PO acceptance.
+
+FILES
+Future customer-visible images and internal attachments use Cloud Storage paths
+such as quotation-files/{draftId}/{fileId}. Firestore stores the metadata and
+visibility; Storage stores the bytes. Upload support remains in the Parking Lot.
+
+NO SINGLE POINT OF FAILURE
+1. Firestore is the workflow source of truth, not Gmail.
+2. CEO and approvers sign in with separate authorized identities.
+3. Multiple approved Gmail sender accounts may be configured; each receives its
+   own local OAuth token and must match the account selected during sign-in.
+4. Failed mail stays in the outbox and can be retried with another approved sender.
+   A non-Gmail provider is an extension point, not an implemented v0.6.0 feature.
+5. Employees can submit and leaders can approve from dashboards while mail is down.
+6. Official Q-Codes use a Firestore transaction/counter, not one employee device.
+
+CURRENT SAFETY BOUNDARY
+No Firebase project was deployed or modified. No Gmail message was sent. The live
+2026 Tracker remains read-only. The existing Dummy Tracker remains the only Sheet
+write destination. Before an external approval-link test, configure a separate
+Firebase TEST project and explicitly allowlist the intended recipient addresses.
+The email link token is signed and expires after 72 hours, but the future portal
+must still require an authenticated CEO/approver. Possessing the link alone is not
+authorization to approve.

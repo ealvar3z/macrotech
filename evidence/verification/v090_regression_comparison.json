@@ -1,0 +1,167 @@
+{
+  "status": "PASS",
+  "primary_development_baseline": "0.9.0-readiness.2",
+  "successor": "0.10.0-tallies.1",
+  "protected_baseline_manifest_files": 286,
+  "protected_baseline_mismatches": [],
+  "baseline_test_results": [
+    {
+      "check": "desktop_build",
+      "exit": 0,
+      "seconds": 0.87
+    },
+    {
+      "check": "python_offline",
+      "exit": 0,
+      "seconds": 0.72,
+      "tests": 101
+    },
+    {
+      "check": "desktop_selftest",
+      "exit": 0,
+      "seconds": 0.15
+    },
+    {
+      "check": "backend_typecheck",
+      "exit": 0,
+      "seconds": 2.64
+    },
+    {
+      "check": "api_offline",
+      "exit": 0,
+      "seconds": 0.74,
+      "tests": 82
+    },
+    {
+      "check": "worker_offline",
+      "exit": 0,
+      "seconds": 1.28,
+      "tests": 28
+    },
+    {
+      "check": "backend_build",
+      "exit": 0,
+      "seconds": 2.84
+    },
+    {
+      "check": "document_samples",
+      "exit": 0,
+      "seconds": 0.26
+    },
+    {
+      "check": "python_source_parse",
+      "exit": 0,
+      "files": 15
+    }
+  ],
+  "successor_test_results": [
+    {
+      "check": "desktop_build",
+      "exit": 0,
+      "seconds": 0.85
+    },
+    {
+      "check": "python_offline",
+      "exit": 0,
+      "seconds": 0.81,
+      "tests": 107
+    },
+    {
+      "check": "desktop_selftest",
+      "exit": 0,
+      "seconds": 0.13
+    },
+    {
+      "check": "backend_typecheck",
+      "exit": 0,
+      "seconds": 2.55
+    },
+    {
+      "check": "api_offline",
+      "exit": 0,
+      "seconds": 0.71,
+      "tests": 82
+    },
+    {
+      "check": "worker_offline",
+      "exit": 0,
+      "seconds": 1.23,
+      "tests": 28
+    },
+    {
+      "check": "backend_build",
+      "exit": 0,
+      "seconds": 3.02
+    },
+    {
+      "check": "document_samples",
+      "exit": 0,
+      "seconds": 0.24
+    },
+    {
+      "check": "python_source_parse",
+      "exit": 0,
+      "files": 15
+    }
+  ],
+  "source_difference": {
+    "changed": [
+      "CONNECTION_SETUP_STATUS.md",
+      "PROJECT_HANDOFF.md",
+      "README - WINDOWS DEMO.txt",
+      "START_HERE.md",
+      "TEST_RESULTS.md",
+      "VERSION",
+      "WINDOWS_MANUAL_TESTS.md",
+      "build_windows_exe.ps1",
+      "dashboard/dist/index.html",
+      "dashboard/package-lock.json",
+      "dashboard/package.json",
+      "dashboard/src/App.tsx",
+      "dashboard/src/dialogs.tsx",
+      "dashboard/src/email-preview.tsx",
+      "dashboard/src/executive.tsx",
+      "dashboard/src/workflow.tsx",
+      "evidence/create_samples.py",
+      "evidence/package_release.py",
+      "macrotech_demo/__init__.py",
+      "macrotech_demo/domain.py",
+      "macrotech_demo/email_preview.py",
+      "macrotech_demo/pdf_output.py",
+      "macrotech_demo/pilot_workflow.py",
+      "macrotech_demo/platform_store.py",
+      "macrotech_demo/state_store.py",
+      "macrotech_demo/tracker_io.py",
+      "macrotech_demo/web_preview.py",
+      "staging_backend/api/dist/readiness-pricing.js",
+      "staging_backend/api/src/readiness-pricing.ts",
+      "staging_backend/scripts/generate-notification-preview.mjs",
+      "staging_backend/worker/dist/gmail.js",
+      "staging_backend/worker/dist/gmail.test.js",
+      "staging_backend/worker/dist/notifications.js",
+      "staging_backend/worker/src/gmail.test.ts",
+      "staging_backend/worker/src/gmail.ts",
+      "staging_backend/worker/src/notifications.ts",
+      "tests/test_demo.py",
+      "tests/test_workflow080.py",
+      "ui/readiness.css",
+      "web_app.pyw"
+    ],
+    "added": [
+      "CHANGELOG_v0.10.0.md",
+      "dashboard/dist/assets/index-B24vKFZt.js",
+      "dashboard/dist/assets/index-Cyv3a5By.css",
+      "evidence/compare_v090_baseline.py",
+      "staging_backend/worker/assets/macrotech_full_logo.jpg",
+      "tests/test_tallies_v010.py"
+    ],
+    "removed": [
+      "dashboard/dist/assets/index-BkfX7O7Q.css",
+      "dashboard/dist/assets/index-CX_a6pgL.js",
+      "staging_backend/web/dist/assets/index-u-l0dEnh.js"
+    ],
+    "unexpected": []
+  },
+  "errors": [],
+  "note": "v0.8.0 is historical rollback ancestry only; it is not the v0.10.0 development baseline."
+}

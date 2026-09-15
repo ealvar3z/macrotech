@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Build output
+**/dist/
+coverage/
+
+# Environment files / local configuration
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Firebase / Google local state
+.firebase/
+.firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Backups / temporary files
+*.bak
+*.tmp
+*.swp
+
+# Local secrets / credentials
+*credentials*.json
+*service-account*.json
+*.pem
+*.key

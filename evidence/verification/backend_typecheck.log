@@ -1,0 +1,20 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> macrotech-approval-platform@0.3.0-readiness.1 typecheck
+> npm run typecheck -w web && npm run typecheck -w api && npm run typecheck -w worker
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @macrotech/approval-web@0.3.0-readiness.1 typecheck
+> tsc --noEmit
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @macrotech/approval-api@0.3.0-readiness.1 typecheck
+> tsc --noEmit
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @macrotech/approval-worker@0.3.0-readiness.1 typecheck
+> tsc --noEmit
+

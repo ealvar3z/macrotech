@@ -1,0 +1,1135 @@
+{
+  "schema_version": 1,
+  "source": {
+    "spreadsheet_title": "2026 TR",
+    "sheet": "MARK-UP",
+    "range": "J2:K2186",
+    "captured_read_only": "2026-09-11",
+    "company_column": "J - COMPANY / CUSTOMER / TIN No.",
+    "contact_column": "K - BUYER / EMAIL"
+  },
+  "limitations": [
+    "The source contains company labels/codes and buyer/contact text.",
+    "The source does not provide a reliable separate legal company name, postal address, TIN, phone number, or contact role.",
+    "Raw contact text is retained so Dummy Tracker output can preserve Macrotech's familiar wording."
+  ],
+  "companies": [
+    {
+      "code": "Alsons Power Group",
+      "record_count": 14,
+      "contacts": [
+        {
+          "raw": "S. SIMBULAN/ sgsimbulan@alsonspower.com",
+          "name": "S. SIMBULAN/",
+          "email": "sgsimbulan@alsonspower.com",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "code": "APO",
+      "record_count": 26,
+      "contacts": [
+        {
+          "raw": "B.INIGO",
+          "name": "B.INIGO",
+          "email": "",
+          "count": 14
+        },
+        {
+          "raw": "loisallen.villordon@ext.chp.com.ph",
+          "name": "",
+          "email": "loisallen.villordon@ext.chp.com.ph",
+          "count": 5
+        },
+        {
+          "raw": "Allan Galicinao<allan.galicinaol@chp.com.ph>",
+          "name": "Allan Galicinao",
+          "email": "allan.galicinaol@chp.com.ph",
+          "count": 3
+        },
+        {
+          "raw": "Ronnhiel S. delas Alas <ronnhiel.delasalas@chp.com.ph>",
+          "name": "Ronnhiel S. delas Alas",
+          "email": "ronnhiel.delasalas@chp.com.ph",
+          "count": 3
+        },
+        {
+          "raw": "Kristia Dennise Sibal<kristia.sibal@chp.com.ph>",
+          "name": "Kristia Dennise Sibal",
+          "email": "kristia.sibal@chp.com.ph",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "AXELUM",
+      "record_count": 4,
+      "contacts": [
+        {
+          "raw": "Ahl-Ehn Tanondong",
+          "name": "Ahl-Ehn Tanondong",
+          "email": "",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "code": "Benguet Corp.",
+      "record_count": 18,
+      "contacts": [
+        {
+          "raw": "Harold Jacinto <harold.hps@gmail.com>",
+          "name": "Harold Jacinto",
+          "email": "harold.hps@gmail.com",
+          "count": 17
+        },
+        {
+          "raw": "GERONIMO AYSON / BENGUET CORP / nosyaominoreg@gmail.com",
+          "name": "GERONIMO AYSON / BENGUET CORP /",
+          "email": "nosyaominoreg@gmail.com",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "BUSCO SUGAR",
+      "record_count": 1,
+      "contacts": [
+        {
+          "raw": "SUNSHINE RAMISCAL",
+          "name": "SUNSHINE RAMISCAL",
+          "email": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "Coco Harvest",
+      "record_count": 17,
+      "contacts": [
+        {
+          "raw": "Julius Urmatan",
+          "name": "Julius Urmatan",
+          "email": "",
+          "count": 17
+        }
+      ]
+    },
+    {
+      "code": "COLAS RAIL PH",
+      "record_count": 24,
+      "contacts": [
+        {
+          "raw": "RANDY PEREA/<randy.perea@colasrail.com>",
+          "name": "RANDY PEREA",
+          "email": "randy.perea@colasrail.com",
+          "count": 15
+        },
+        {
+          "raw": "ROXAS, Marilou (COLAS RAIL) <marilou.roxas@colasrail.com>",
+          "name": "ROXAS, Marilou (COLAS RAIL)",
+          "email": "marilou.roxas@colasrail.com",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "code": "CORI",
+      "record_count": 3,
+      "contacts": [
+        {
+          "raw": "Janeth Sabado",
+          "name": "Janeth Sabado",
+          "email": "",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "code": "COTABATO SUGAR",
+      "record_count": 14,
+      "contacts": [
+        {
+          "raw": "M.GAPASIN",
+          "name": "M.GAPASIN",
+          "email": "",
+          "count": 8
+        },
+        {
+          "raw": "J.LEGASPINO",
+          "name": "J.LEGASPINO",
+          "email": "",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "code": "Cotabato Sugar Central Co.",
+      "record_count": 6,
+      "contacts": [
+        {
+          "raw": "Maria Chrisel B. Gapasin <maria.gapasin@sharepro.com.ph>",
+          "name": "Maria Chrisel B. Gapasin",
+          "email": "maria.gapasin@sharepro.com.ph",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "code": "DAVAO  SUGAR",
+      "record_count": 11,
+      "contacts": [
+        {
+          "raw": "K.LACIBAR",
+          "name": "K.LACIBAR",
+          "email": "",
+          "count": 8
+        },
+        {
+          "raw": "B.DELA CRUZ",
+          "name": "B.DELA CRUZ",
+          "email": "",
+          "count": 2
+        },
+        {
+          "raw": "M.GAPASIN",
+          "name": "M.GAPASIN",
+          "email": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "Dedon",
+      "record_count": 7,
+      "contacts": [
+        {
+          "raw": "S. Mendoza/suelo.mendoza@dedon.ph",
+          "name": "S. Mendoza",
+          "email": "suelo.mendoza@dedon.ph",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "code": "DEL MONTE",
+      "record_count": 4,
+      "contacts": [
+        {
+          "raw": "DolautaSG@delmonte-phil.com",
+          "name": "",
+          "email": "DolautaSG@delmonte-phil.com",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "code": "DMPI",
+      "record_count": 23,
+      "contacts": [
+        {
+          "raw": "B.DOLAUTA",
+          "name": "B.DOLAUTA",
+          "email": "",
+          "count": 18
+        },
+        {
+          "raw": "A.AVILA",
+          "name": "A.AVILA",
+          "email": "",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "code": "DUNLOP INTERNATIONAL PHILIPPINES INC",
+      "record_count": 1,
+      "contacts": [
+        {
+          "raw": "MA ELENA APORONGAO /  m.aporongao@dunlopsports.ph",
+          "name": "MA ELENA APORONGAO /",
+          "email": "m.aporongao@dunlopsports.ph",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "EAGLE CEMENT CORP",
+      "record_count": 5,
+      "contacts": [
+        {
+          "raw": "MARIO ENRIQUEZ / mcenriquez@eagle-cement.com.ph",
+          "name": "MARIO ENRIQUEZ /",
+          "email": "mcenriquez@eagle-cement.com.ph",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "code": "FDC",
+      "record_count": 7,
+      "contacts": [
+        {
+          "raw": "Kimberly Sevadera <kimberly.sevadera@sharepro.com.ph>",
+          "name": "Kimberly Sevadera",
+          "email": "kimberly.sevadera@sharepro.com.ph",
+          "count": 4
+        },
+        {
+          "raw": "K. SERADERA",
+          "name": "K. SERADERA",
+          "email": "",
+          "count": 2
+        },
+        {
+          "raw": "Julaica Anamarie L. Guiamalon <julaica.guiamalon@sharepro.com.ph>",
+          "name": "Julaica Anamarie L. Guiamalon",
+          "email": "julaica.guiamalon@sharepro.com.ph",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "FILINVEST",
+      "record_count": 15,
+      "contacts": [
+        {
+          "raw": "Edgardo B. Anenias <edgardo.anenias@sharepro.com.ph>",
+          "name": "Edgardo B. Anenias",
+          "email": "edgardo.anenias@sharepro.com.ph",
+          "count": 8
+        },
+        {
+          "raw": "emmarie.evangelista@filinvestgroup.com",
+          "name": "",
+          "email": "emmarie.evangelista@filinvestgroup.com",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "code": "FILINVEST SHAREPRO",
+      "record_count": 1,
+      "contacts": [
+        {
+          "raw": "Edgardo B. Anenias",
+          "name": "Edgardo B. Anenias",
+          "email": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "FIRST FARMERS HOLDING CORPORATION",
+      "record_count": 5,
+      "contacts": [
+        {
+          "raw": "V. BANASING",
+          "name": "V. BANASING",
+          "email": "",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "code": "FPPI",
+      "record_count": 4,
+      "contacts": [
+        {
+          "raw": "ALTHEA PUBLICO",
+          "name": "ALTHEA PUBLICO",
+          "email": "",
+          "count": 2
+        },
+        {
+          "raw": "JANETH SABADO",
+          "name": "JANETH SABADO",
+          "email": "",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "code": "FRANKLIN BAKER",
+      "record_count": 11,
+      "contacts": [
+        {
+          "raw": "J.PILAPIL",
+          "name": "J.PILAPIL",
+          "email": "",
+          "count": 11
+        }
+      ]
+    },
+    {
+      "code": "FRANKLIN BAKER (SAN PABLO)",
+      "record_count": 4,
+      "contacts": [
+        {
+          "raw": "J. MARCAIDA <john.marcaida@franklinbaker.ph>",
+          "name": "J. MARCAIDA",
+          "email": "john.marcaida@franklinbaker.ph",
+          "count": 2
+        },
+        {
+          "raw": "Rizza Tolentino<Rizza.Tolentino@franklinbaker.ph>",
+          "name": "Rizza Tolentino",
+          "email": "Rizza.Tolentino@franklinbaker.ph",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "code": "GMEC",
+      "record_count": 43,
+      "contacts": [
+        {
+          "raw": "JESSICA PASCUAL / jessicamariel.pascual@aboitizpower.com",
+          "name": "JESSICA PASCUAL /",
+          "email": "jessicamariel.pascual@aboitizpower.com",
+          "count": 27
+        },
+        {
+          "raw": "Liezel Cruz / liezel.cruz@aboitizpower.com",
+          "name": "Liezel Cruz /",
+          "email": "liezel.cruz@aboitizpower.com",
+          "count": 9
+        },
+        {
+          "raw": "A. RAMOS",
+          "name": "A. RAMOS",
+          "email": "",
+          "count": 5
+        },
+        {
+          "raw": "ARLENE RAMOS / arlene.ramos@aboitizpower.com",
+          "name": "ARLENE RAMOS /",
+          "email": "arlene.ramos@aboitizpower.com",
+          "count": 1
+        },
+        {
+          "raw": "charmaine.montano@aboitizpower.com / Gmec / charmaine.montano@aboitizpower.com",
+          "name": "",
+          "email": "charmaine.montano@aboitizpower.com",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "GNPD",
+      "record_count": 472,
+      "contacts": [
+        {
+          "raw": "Airah Paulo <airah.paulo@aboitizpower.com>",
+          "name": "Airah Paulo",
+          "email": "airah.paulo@aboitizpower.com",
+          "count": 125
+        },
+        {
+          "raw": "R. DELLUPAC",
+          "name": "R. DELLUPAC",
+          "email": "",
+          "count": 97
+        },
+        {
+          "raw": "Evita Pangilinan <evita.pangilinan@aboitizpower.com>",
+          "name": "Evita Pangilinan",
+          "email": "evita.pangilinan@aboitizpower.com",
+          "count": 93
+        },
+        {
+          "raw": "Angela Bacay <angela.bacay@aboitizpower.com>",
+          "name": "Angela Bacay",
+          "email": "angela.bacay@aboitizpower.com",
+          "count": 78
+        },
+        {
+          "raw": "JOSEPH BALMACEDA  /   <joseph.balmaceda@aboitizpower.com>",
+          "name": "JOSEPH BALMACEDA  /",
+          "email": "joseph.balmaceda@aboitizpower.com",
+          "count": 20
+        },
+        {
+          "raw": "DAVID LUNA / david.luna@aboitizpower.com",
+          "name": "DAVID LUNA /",
+          "email": "david.luna@aboitizpower.com",
+          "count": 17
+        },
+        {
+          "raw": "Darren Masangkay <darren.masangkay@aboitizpower.com>",
+          "name": "Darren Masangkay",
+          "email": "darren.masangkay@aboitizpower.com",
+          "count": 13
+        },
+        {
+          "raw": "David Luna",
+          "name": "David Luna",
+          "email": "",
+          "count": 12
+        },
+        {
+          "raw": "J. BALMACEDA",
+          "name": "J. BALMACEDA",
+          "email": "",
+          "count": 8
+        },
+        {
+          "raw": "Jasmine Mae Bartolome <jasminemae.bartolome@aboitizpower.com>",
+          "name": "Jasmine Mae Bartolome",
+          "email": "jasminemae.bartolome@aboitizpower.com",
+          "count": 7
+        },
+        {
+          "raw": "Gerard Nueva España <gerard.nuevaespana@aboitizpower.com>",
+          "name": "Gerard Nueva España",
+          "email": "gerard.nuevaespana@aboitizpower.com",
+          "count": 1
+        },
+        {
+          "raw": "rochelle.alabanza@aboitizpower.com",
+          "name": "",
+          "email": "rochelle.alabanza@aboitizpower.com",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "GNPK",
+      "record_count": 100,
+      "contacts": [
+        {
+          "raw": "Ramos, Clark Jay S. <ClarkJay.Ramos@gnpk.com.ph>",
+          "name": "Ramos, Clark Jay S.",
+          "email": "ClarkJay.Ramos@gnpk.com.ph",
+          "count": 37
+        },
+        {
+          "raw": "Achay, Ind Blaire A. <Ind.Achay@gnpk.com.ph>",
+          "name": "Achay, Ind Blaire A.",
+          "email": "Ind.Achay@gnpk.com.ph",
+          "count": 28
+        },
+        {
+          "raw": "Balucan, Cecil L. <cecil.balucan@gnpk.com.ph>",
+          "name": "Balucan, Cecil L.",
+          "email": "cecil.balucan@gnpk.com.ph",
+          "count": 13
+        },
+        {
+          "raw": "Mezo, Donna G. <Donna.Mezo@gnpk.com.ph>",
+          "name": "Mezo, Donna G.",
+          "email": "Donna.Mezo@gnpk.com.ph",
+          "count": 9
+        },
+        {
+          "raw": "Martin, Sheila M. <Sheila.Martin@gnpk.com.ph>",
+          "name": "Martin, Sheila M.",
+          "email": "Sheila.Martin@gnpk.com.ph",
+          "count": 7
+        },
+        {
+          "raw": "H. CANONIGO",
+          "name": "H. CANONIGO",
+          "email": "",
+          "count": 4
+        },
+        {
+          "raw": "Canonigo, Henry D. <Henry.Canonigo@gnpk.com.ph>",
+          "name": "Canonigo, Henry D.",
+          "email": "Henry.Canonigo@gnpk.com.ph",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "code": "GNPower Mariveles Energy Center Ltd. Co.",
+      "record_count": 2,
+      "contacts": [
+        {
+          "raw": "David Luna",
+          "name": "David Luna",
+          "email": "",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "code": "HEAD SPORT PHILIPPINES",
+      "record_count": 2,
+      "contacts": [
+        {
+          "raw": "JAN M. LANGCAON",
+          "name": "JAN M. LANGCAON",
+          "email": "",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "code": "HOLCIM PHILIPPINES INC.",
+      "record_count": 1,
+      "contacts": [
+        {
+          "raw": "Arnel A. Ampiloquio",
+          "name": "Arnel A. Ampiloquio",
+          "email": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "JACOBI CARBONS PHILIPPINES INC",
+      "record_count": 4,
+      "contacts": [
+        {
+          "raw": "Mark Edan Sarzuelo <markedan.sarzuelo@jacobi.net>",
+          "name": "Mark Edan Sarzuelo",
+          "email": "markedan.sarzuelo@jacobi.net",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "code": "LIMAY POWER",
+      "record_count": 2,
+      "contacts": [
+        {
+          "raw": "REDEN TIBURCIO / rtiburcio@smgp.sanmiguel.com.ph",
+          "name": "REDEN TIBURCIO /",
+          "email": "rtiburcio@smgp.sanmiguel.com.ph",
+          "count": 1
+        },
+        {
+          "raw": "RON LOUISE A. ORTAZO / rortazo@smcgph.sanmiguel.com.ph",
+          "name": "RON LOUISE A. ORTAZO /",
+          "email": "rortazo@smcgph.sanmiguel.com.ph",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "Limay Power Plant",
+      "record_count": 3,
+      "contacts": [
+        {
+          "raw": "rtiburcio@smgp.sanmiguel.com.ph",
+          "name": "",
+          "email": "rtiburcio@smgp.sanmiguel.com.ph",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "code": "Lopez Sugar Corporation",
+      "record_count": 40,
+      "contacts": [
+        {
+          "raw": "Robert Clarence F. Mahadali",
+          "name": "Robert Clarence F. Mahadali",
+          "email": "",
+          "count": 40
+        }
+      ]
+    },
+    {
+      "code": "MARIVELES POWER",
+      "record_count": 17,
+      "contacts": [
+        {
+          "raw": "REN MARK NICDAO / rnicdao@smcgph.sanmiguel.com.ph",
+          "name": "REN MARK NICDAO /",
+          "email": "rnicdao@smcgph.sanmiguel.com.ph",
+          "count": 17
+        }
+      ]
+    },
+    {
+      "code": "MARIWASA",
+      "record_count": 18,
+      "contacts": [
+        {
+          "raw": "rose.mallillin@mariwasa.com",
+          "name": "",
+          "email": "rose.mallillin@mariwasa.com",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "code": "MASINLOC",
+      "record_count": 91,
+      "contacts": [
+        {
+          "raw": "Marielle Z. Ebue <mzebue@mppcl.sanmiguel.com.ph>",
+          "name": "Marielle Z. Ebue",
+          "email": "mzebue@mppcl.sanmiguel.com.ph",
+          "count": 73
+        },
+        {
+          "raw": "Jerome M. Paruli <jparuli@smcgph.sanmiguel.com.ph>",
+          "name": "Jerome M. Paruli",
+          "email": "jparuli@smcgph.sanmiguel.com.ph",
+          "count": 12
+        },
+        {
+          "raw": "J.LACDAN",
+          "name": "J.LACDAN",
+          "email": "",
+          "count": 4
+        },
+        {
+          "raw": "V. EDNALAGUIM",
+          "name": "V. EDNALAGUIM",
+          "email": "",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "code": "MINERGY",
+      "record_count": 5,
+      "contacts": [
+        {
+          "raw": "Raymond P. Jardin <raymond.jardin@bergs-mpc.com>",
+          "name": "Raymond P. Jardin",
+          "email": "raymond.jardin@bergs-mpc.com",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "code": "MINERGY TABLON",
+      "record_count": 7,
+      "contacts": [
+        {
+          "raw": "Jorhee Jay Navarro <jorheejay@gmail.com>",
+          "name": "Jorhee Jay Navarro",
+          "email": "jorheejay@gmail.com",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "code": "MPI",
+      "record_count": 18,
+      "contacts": [
+        {
+          "raw": "Sean Kim Mendez/mpi.purchasingassistant@gmail.com",
+          "name": "Sean Kim Mendez",
+          "email": "mpi.purchasingassistant@gmail.com",
+          "count": 13
+        },
+        {
+          "raw": "Sean Kim Mendez",
+          "name": "Sean Kim Mendez",
+          "email": "",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "code": "MVC",
+      "record_count": 104,
+      "contacts": [
+        {
+          "raw": "X.PINOTE",
+          "name": "X.PINOTE",
+          "email": "",
+          "count": 55
+        },
+        {
+          "raw": "X.ESCALERA",
+          "name": "X.ESCALERA",
+          "email": "",
+          "count": 28
+        },
+        {
+          "raw": "R.BONGO",
+          "name": "R.BONGO",
+          "email": "",
+          "count": 10
+        },
+        {
+          "raw": "D.TINOY",
+          "name": "D.TINOY",
+          "email": "",
+          "count": 9
+        },
+        {
+          "raw": "E.LU",
+          "name": "E.LU",
+          "email": "",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "code": "NCC",
+      "record_count": 4,
+      "contacts": [
+        {
+          "raw": "Niczie Flor P. Laid nlaid@smeii.sanmiguel.com.ph",
+          "name": "Niczie Flor P. Laid",
+          "email": "nlaid@smeii.sanmiguel.com.ph",
+          "count": 3
+        },
+        {
+          "raw": "Joel C. Rombaoa jcrombaoa@ncc.sanmiguel.com.ph",
+          "name": "Joel C. Rombaoa",
+          "email": "jcrombaoa@ncc.sanmiguel.com.ph",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "PETRA CEMENT INCORPORATION",
+      "record_count": 1,
+      "contacts": [
+        {
+          "raw": "Rosauro Arjona <rosauro.arjona@unioncement.com.ph>",
+          "name": "Rosauro Arjona",
+          "email": "rosauro.arjona@unioncement.com.ph",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "Philcement Corporation",
+      "record_count": 1,
+      "contacts": [
+        {
+          "raw": "BONG ARJONA / rosauro.arjona@unioncement.com.ph",
+          "name": "BONG ARJONA /",
+          "email": "rosauro.arjona@unioncement.com.ph",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "PILMICO",
+      "record_count": 4,
+      "contacts": [
+        {
+          "raw": "Cathy Sabella <cathy.sabella@aboitiz.com>",
+          "name": "Cathy Sabella",
+          "email": "cathy.sabella@aboitiz.com",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "code": "RC BATANGAS",
+      "record_count": 8,
+      "contacts": [
+        {
+          "raw": "Alba, Gemma <gemma.alba@republiccement.com>",
+          "name": "Alba, Gemma",
+          "email": "gemma.alba@republiccement.com",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "code": "RC BULACAN",
+      "record_count": 1,
+      "contacts": [
+        {
+          "raw": "Joan Villamayor / joan.villamayor@republiccement.com",
+          "name": "Joan Villamayor /",
+          "email": "joan.villamayor@republiccement.com",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "RC ILIGAN",
+      "record_count": 8,
+      "contacts": [
+        {
+          "raw": "Angay, Mae Belle Lynne <maebellelynne.angay@republiccement.com>",
+          "name": "Angay, Mae Belle Lynne",
+          "email": "maebellelynne.angay@republiccement.com",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "code": "RC TERESA",
+      "record_count": 2,
+      "contacts": [
+        {
+          "raw": "Bentulan, Carlo / <carlo.bentulan@republiccement.com>",
+          "name": "Bentulan, Carlo /",
+          "email": "carlo.bentulan@republiccement.com",
+          "count": 1
+        },
+        {
+          "raw": "C.BENTULAN",
+          "name": "C.BENTULAN",
+          "email": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "Sarangani Energy Corporation",
+      "record_count": 4,
+      "contacts": [
+        {
+          "raw": "Erick E. Sabanal",
+          "name": "Erick E. Sabanal",
+          "email": "",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "code": "SCC",
+      "record_count": 1,
+      "contacts": [
+        {
+          "raw": "Niczie Flor P. Laid nlaid@smeii.sanmiguel.com.ph",
+          "name": "Niczie Flor P. Laid",
+          "email": "nlaid@smeii.sanmiguel.com.ph",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "SCPC",
+      "record_count": 2,
+      "contacts": [
+        {
+          "raw": "M.J. Palo",
+          "name": "M.J. Palo",
+          "email": "",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "code": "SILANGAN MINDANAO MINING CO., INC.",
+      "record_count": 2,
+      "contacts": [
+        {
+          "raw": "Rachel V. Hill <rvhill@silanganmining.com.ph>",
+          "name": "Rachel V. Hill",
+          "email": "rvhill@silanganmining.com.ph",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "code": "SLPGC",
+      "record_count": 3,
+      "contacts": [
+        {
+          "raw": "M.J. Palo",
+          "name": "M.J. Palo",
+          "email": "",
+          "count": 2
+        },
+        {
+          "raw": "Joven A. Cena <jacena@semcalaca.com>",
+          "name": "Joven A. Cena",
+          "email": "jacena@semcalaca.com",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "SMGPH",
+      "record_count": 9,
+      "contacts": [
+        {
+          "raw": "Jerome M. Paruli <jparuli@smcgph.sanmiguel.com.ph>",
+          "name": "Jerome M. Paruli",
+          "email": "jparuli@smcgph.sanmiguel.com.ph",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "code": "SMPC",
+      "record_count": 4,
+      "contacts": [
+        {
+          "raw": "R.FLORENDO",
+          "name": "R.FLORENDO",
+          "email": "",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "code": "SOLID",
+      "record_count": 156,
+      "contacts": [
+        {
+          "raw": "BKI <brennankyle.inigo@chp.com.ph>",
+          "name": "BKI",
+          "email": "brennankyle.inigo@chp.com.ph",
+          "count": 68
+        },
+        {
+          "raw": "DELMAR <delmar.selimola-a@chp.com.ph>",
+          "name": "DELMAR",
+          "email": "delmar.selimola-a@chp.com.ph",
+          "count": 39
+        },
+        {
+          "raw": "MAUREEN <maureen.bombita@chp.com.ph>",
+          "name": "MAUREEN",
+          "email": "maureen.bombita@chp.com.ph",
+          "count": 22
+        },
+        {
+          "raw": "ALIANA <aliana.peralta@chp.com.ph>",
+          "name": "ALIANA",
+          "email": "aliana.peralta@chp.com.ph",
+          "count": 11
+        },
+        {
+          "raw": "KRISTIA SIBAL <kristia.sibal@chp.com.ph>",
+          "name": "KRISTIA SIBAL",
+          "email": "kristia.sibal@chp.com.ph",
+          "count": 8
+        },
+        {
+          "raw": "ALLAN <allan.galicinaol@chp.com.ph>",
+          "name": "ALLAN",
+          "email": "allan.galicinaol@chp.com.ph",
+          "count": 7
+        },
+        {
+          "raw": "B.INIGO",
+          "name": "B.INIGO",
+          "email": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "TAGANITO HPAL NICKEL CORPORATION",
+      "record_count": 6,
+      "contacts": [
+        {
+          "raw": "M.Ladroma@smm.com.ph",
+          "name": "",
+          "email": "M.Ladroma@smm.com.ph",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "code": "THERMA LUZON PAGBILAO",
+      "record_count": 38,
+      "contacts": [
+        {
+          "raw": "Wilma Azul <wilma.azul@aboitizpower.com>",
+          "name": "Wilma Azul",
+          "email": "wilma.azul@aboitizpower.com",
+          "count": 24
+        },
+        {
+          "raw": "BRYAN <bryan.brase@aboitizpower.com>",
+          "name": "BRYAN",
+          "email": "bryan.brase@aboitizpower.com",
+          "count": 13
+        }
+      ]
+    },
+    {
+      "code": "Therma South, Inc.",
+      "record_count": 2,
+      "contacts": [
+        {
+          "raw": "Rhylie Piquero / rhylie.piquero@aboitizpower.com",
+          "name": "Rhylie Piquero /",
+          "email": "rhylie.piquero@aboitizpower.com",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "code": "TVI Resource Development Phils. Inc.",
+      "record_count": 18,
+      "contacts": [
+        {
+          "raw": "Julie Jane Sabuya <JulieJane.Sabuya@tvird.com.ph>",
+          "name": "Julie Jane Sabuya",
+          "email": "JulieJane.Sabuya@tvird.com.ph",
+          "count": 13
+        },
+        {
+          "raw": "CharyzKristel.Patungan@tvird.com.ph",
+          "name": "",
+          "email": "CharyzKristel.Patungan@tvird.com.ph",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "code": "UNION CEMENT",
+      "record_count": 7,
+      "contacts": [
+        {
+          "raw": "J.BAMA",
+          "name": "J.BAMA",
+          "email": "",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "code": "Victorias Milling Company",
+      "record_count": 50,
+      "contacts": [
+        {
+          "raw": "IR. GICANA <irwin.gicana@victoriasmilling.com>",
+          "name": "IR. GICANA",
+          "email": "irwin.gicana@victoriasmilling.com",
+          "count": 50
+        }
+      ]
+    },
+    {
+      "code": "Viskase",
+      "record_count": 1,
+      "contacts": [
+        {
+          "raw": "Princess Bumanlag Princess.Bumanlag@viskase.com",
+          "name": "Princess Bumanlag",
+          "email": "Princess.Bumanlag@viskase.com",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "code": "WILMAR",
+      "record_count": 23,
+      "contacts": [
+        {
+          "raw": "juansalvador.dognidon@ph.wilmar-intl.com",
+          "name": "",
+          "email": "juansalvador.dognidon@ph.wilmar-intl.com",
+          "count": 13
+        },
+        {
+          "raw": "John Laurence Simbre <john.simbre@ph.wilmar-intl.com>",
+          "name": "John Laurence Simbre",
+          "email": "john.simbre@ph.wilmar-intl.com",
+          "count": 8
+        },
+        {
+          "raw": "Martin Roger P. Bo <martin.bo@ph.wilmar-intl.com>",
+          "name": "Martin Roger P. Bo",
+          "email": "martin.bo@ph.wilmar-intl.com",
+          "count": 2
+        }
+      ]
+    }
+  ]
+}
+

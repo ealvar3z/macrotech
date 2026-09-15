@@ -1,0 +1,502 @@
+TAP version 13
+# Subtest: email normalization trims and lowercases
+ok 1 - email normalization trims and lowercases
+  ---
+  duration_ms: 0.895676
+  type: 'test'
+  ...
+# Subtest: assigned approver comparison is case-insensitive
+ok 2 - assigned approver comparison is case-insensitive
+  ---
+  duration_ms: 0.178368
+  type: 'test'
+  ...
+# Subtest: wrong approver is rejected without disclosing assigned email
+ok 3 - wrong approver is rejected without disclosing assigned email
+  ---
+  duration_ms: 0.520483
+  type: 'test'
+  ...
+# Subtest: pending approval accepts a new approval decision
+ok 4 - pending approval accepts a new approval decision
+  ---
+  duration_ms: 0.132709
+  type: 'test'
+  ...
+# Subtest: pending approval accepts a return decision
+ok 5 - pending approval accepts a return decision
+  ---
+  duration_ms: 0.128262
+  type: 'test'
+  ...
+# Subtest: same request id is idempotent after an identical approval
+ok 6 - same request id is idempotent after an identical approval
+  ---
+  duration_ms: 0.120511
+  type: 'test'
+  ...
+# Subtest: same request id with a different action is rejected as an idempotency conflict
+ok 7 - same request id with a different action is rejected as an idempotency conflict
+  ---
+  duration_ms: 0.249455
+  type: 'test'
+  ...
+# Subtest: same request id with a different comment is rejected as an idempotency conflict
+ok 8 - same request id with a different comment is rejected as an idempotency conflict
+  ---
+  duration_ms: 0.154592
+  type: 'test'
+  ...
+# Subtest: different request id cannot overwrite a final decision
+ok 9 - different request id cannot overwrite a final decision
+  ---
+  duration_ms: 0.226601
+  type: 'test'
+  ...
+# Subtest: decision status mapping
+ok 10 - decision status mapping
+  ---
+  duration_ms: 0.275785
+  type: 'test'
+  ...
+# Subtest: known statuses are accepted and unknown statuses are rejected
+ok 11 - known statuses are accepted and unknown statuses are rejected
+  ---
+  duration_ms: 0.154963
+  type: 'test'
+  ...
+# Subtest: comment normalization trims retry payloads consistently
+ok 12 - comment normalization trims retry payloads consistently
+  ---
+  duration_ms: 0.082294
+  type: 'test'
+  ...
+# Subtest: approval id validation accepts opaque URL-safe ids
+ok 13 - approval id validation accepts opaque URL-safe ids
+  ---
+  duration_ms: 0.131538
+  type: 'test'
+  ...
+# Subtest: approval id validation rejects short, spaced, or path-like ids
+ok 14 - approval id validation rejects short, spaced, or path-like ids
+  ---
+  duration_ms: 0.105448
+  type: 'test'
+  ...
+# Subtest: request id sanitization accepts safe correlation ids
+ok 15 - request id sanitization accepts safe correlation ids
+  ---
+  duration_ms: 0.100771
+  type: 'test'
+  ...
+# Subtest: request id sanitization rejects control and unsafe characters
+ok 16 - request id sanitization rejects control and unsafe characters
+  ---
+  duration_ms: 0.176225
+  type: 'test'
+  ...
+# Subtest: new draft begins with one selected supplier option
+ok 17 - new draft begins with one selected supplier option
+  ---
+  duration_ms: 4.089387
+  type: 'test'
+  ...
+# Subtest: autosave recovery ignores stale or repeated client revisions
+ok 18 - autosave recovery ignores stale or repeated client revisions
+  ---
+  duration_ms: 0.117877
+  type: 'test'
+  ...
+# Subtest: only the selected supplier drives customer-facing quotation values
+ok 19 - only the selected supplier drives customer-facing quotation values
+  ---
+  duration_ms: 2.210824
+  type: 'test'
+  ...
+# Subtest: changing the selected supplier changes customer output without changing alternates
+ok 20 - changing the selected supplier changes customer output without changing alternates
+  ---
+  duration_ms: 0.866462
+  type: 'test'
+  ...
+# Subtest: Tracker projection emits selected supplier first and retains all alternates
+ok 21 - Tracker projection emits selected supplier first and retains all alternates
+  ---
+  duration_ms: 1.327055
+  type: 'test'
+  ...
+# Subtest: changing selection reorders Tracker rows but does not lose supplier options
+ok 22 - changing selection reorders Tracker rows but does not lose supplier options
+  ---
+  duration_ms: 0.722817
+  type: 'test'
+  ...
+# Subtest: generation validation requires complete commercial data for retained alternates
+ok 23 - generation validation requires complete commercial data for retained alternates
+  ---
+  duration_ms: 1.244641
+  type: 'test'
+  ...
+# Subtest: legacy API cannot use bootstrap email or mere assignment as authority
+ok 24 - legacy API cannot use bootstrap email or mere assignment as authority
+  ---
+  duration_ms: 1.241106
+  type: 'test'
+  ...
+# Subtest: self review policy fails closed and does not accept truthy strings
+ok 25 - self review policy fails closed and does not accept truthy strings
+  ---
+  duration_ms: 0.313702
+  type: 'test'
+  ...
+# Subtest: formats new Q Codes with a four-digit annual employee sequence
+ok 26 - formats new Q Codes with a four-digit annual employee sequence
+  ---
+  duration_ms: 0.994966
+  type: 'test'
+  ...
+# Subtest: rejects invalid employee prefixes, years, and sequence numbers
+ok 27 - rejects invalid employee prefixes, years, and sequence numbers
+  ---
+  duration_ms: 0.352821
+  type: 'test'
+  ...
+# Subtest: reads legacy sequence widths without rewriting historical codes
+ok 28 - reads legacy sequence widths without rewriting historical codes
+  ---
+  duration_ms: 0.795696
+  type: 'test'
+  ...
+# Subtest: recognizes observed legacy revision suffixes for collision prevention
+ok 29 - recognizes observed legacy revision suffixes for collision prevention
+  ---
+  duration_ms: 0.12656
+  type: 'test'
+  ...
+# Subtest: does not guess malformed cells containing multiple or rearranged Q Codes
+ok 30 - does not guess malformed cells containing multiple or rearranged Q Codes
+  ---
+  duration_ms: 0.096195
+  type: 'test'
+  ...
+# Subtest: bootstrap proposal stops on an unrecognized value from the requested series
+ok 31 - bootstrap proposal stops on an unrecognized value from the requested series
+  ---
+  duration_ms: 0.231097
+  type: 'test'
+  ...
+# Subtest: an unrelated malformed series does not block the requested employee
+ok 32 - an unrelated malformed series does not block the requested employee
+  ---
+  duration_ms: 0.144127
+  type: 'test'
+  ...
+# Subtest: proposes the next code per employee and year using four digits
+ok 33 - proposes the next code per employee and year using four digits
+  ---
+  duration_ms: 0.124798
+  type: 'test'
+  ...
+# Subtest: repeated Q Codes for multiple line items do not consume new sequences
+ok 34 - repeated Q Codes for multiple line items do not consume new sequences
+  ---
+  duration_ms: 0.227021
+  type: 'test'
+  ...
+# Subtest: an employee sequence starts at 0001 each year
+ok 35 - an employee sequence starts at 0001 each year
+  ---
+  duration_ms: 0.245339
+  type: 'test'
+  ...
+# Subtest: different employees have independent annual sequences
+ok 36 - different employees have independent annual sequences
+  ---
+  duration_ms: 0.129154
+  type: 'test'
+  ...
+# Subtest: sequence 9999 cannot roll into a fifth digit
+ok 37 - sequence 9999 cannot roll into a fifth digit
+  ---
+  duration_ms: 0.120241
+  type: 'test'
+  ...
+# Subtest: PO decimal comparison preserves fractions beyond Number precision
+ok 38 - PO decimal comparison preserves fractions beyond Number precision
+  ---
+  duration_ms: 1.275577
+  type: 'test'
+  ...
+# Subtest: oversized Firestore snapshot fails before any write
+ok 39 - oversized Firestore snapshot fails before any write
+  ---
+  duration_ms: 14.124073
+  type: 'test'
+  ...
+# Subtest: 50 concurrent submissions allocate distinct Q-Codes atomically with audit and outbox
+ok 40 - 50 concurrent submissions allocate distinct Q-Codes atomically with audit and outbox
+  ---
+  duration_ms: 252.39971
+  type: 'test'
+  ...
+# Subtest: parallel duplicate submits produce one Q-Code, approval and notification
+ok 41 - parallel duplicate submits produce one Q-Code, approval and notification
+  ---
+  duration_ms: 60.972129
+  type: 'test'
+  ...
+# Subtest: commit interruption loses no partial counter, snapshot or outbox; retry succeeds
+ok 42 - commit interruption loses no partial counter, snapshot or outbox; retry succeeds
+  ---
+  duration_ms: 6.016986
+  type: 'test'
+  ...
+# Subtest: active role and verified identity required; disabled and unauthorized users denied
+ok 43 - active role and verified identity required; disabled and unauthorized users denied
+  ---
+  duration_ms: 2.171365
+  type: 'test'
+  ...
+# Subtest: no self approval including admin unless explicit policy permits it, rechecked on decision
+ok 44 - no self approval including admin unless explicit policy permits it, rechecked on decision
+  ---
+  duration_ms: 6.19937
+  type: 'test'
+  ...
+# Subtest: same decision retries once; changed payload and competing approval/reject conflict
+ok 45 - same decision retries once; changed payload and competing approval/reject conflict
+  ---
+  duration_ms: 13.528347
+  type: 'test'
+  ...
+# Subtest: forwarded links and revoked reviewer role cannot approve or view
+ok 46 - forwarded links and revoked reviewer role cannot approve or view
+  ---
+  duration_ms: 1.729219
+  type: 'test'
+  ...
+# Subtest: submitted snapshot is immutable; stale save, hash changes, and expiry rejected
+ok 47 - submitted snapshot is immutable; stale save, hash changes, and expiry rejected
+  ---
+  duration_ms: 1.946977
+  type: 'test'
+  ...
+# Subtest: recall makes previous decision stale; revision retains Q-Code and archived snapshot
+ok 48 - recall makes previous decision stale; revision retains Q-Code and archived snapshot
+  ---
+  duration_ms: 1.96917
+  type: 'test'
+  ...
+# Subtest: partial PO is distinct from internal approval and validates line quantities
+ok 49 - partial PO is distinct from internal approval and validates line quantities
+  ---
+  duration_ms: 7.770361
+  type: 'test'
+  ...
+# Subtest: files require clean owner/revision manifests; paths, types, size and generation checked
+ok 50 - files require clean owner/revision manifests; paths, types, size and generation checked
+  ---
+  duration_ms: 4.085151
+  type: 'test'
+  ...
+# Subtest: financial projection reconciles discount and excludes all supplier data
+ok 51 - financial projection reconciles discount and excludes all supplier data
+  ---
+  duration_ms: 0.943008
+  type: 'test'
+  ...
+# Subtest: failure of notification delivery does not alter committed quotation
+ok 52 - failure of notification delivery does not alter committed quotation
+  ---
+  duration_ms: 2.058164
+  type: 'test'
+  ...
+# Subtest: create approval normalizes approver email
+ok 53 - create approval normalizes approver email
+  ---
+  duration_ms: 3.872933
+  type: 'test'
+  ...
+# Subtest: Q_CODE source requires a q code
+ok 54 - Q_CODE source requires a q code
+  ---
+  duration_ms: 0.694184
+  type: 'test'
+  ...
+# Subtest: RFQ source can be used before a q code exists
+ok 55 - RFQ source can be used before a q code exists
+  ---
+  duration_ms: 0.217187
+  type: 'test'
+  ...
+# Subtest: RFQ or inquiry source requires a reference
+ok 56 - RFQ or inquiry source requires a reference
+  ---
+  duration_ms: 0.181984
+  type: 'test'
+  ...
+# Subtest: single-line business fields reject CRLF header injection
+ok 57 - single-line business fields reject CRLF header injection
+  ---
+  duration_ms: 0.358149
+  type: 'test'
+  ...
+# Subtest: quotation object accepts a relative pdf path
+ok 58 - quotation object accepts a relative pdf path
+  ---
+  duration_ms: 0.173912
+  type: 'test'
+  ...
+# Subtest: quotation object rejects traversal-like or non-pdf paths
+ok 59 - quotation object rejects traversal-like or non-pdf paths
+  ---
+  duration_ms: 0.331859
+  type: 'test'
+  ...
+# Subtest: return decision requires a comment
+ok 60 - return decision requires a comment
+  ---
+  duration_ms: 0.764699
+  type: 'test'
+  ...
+# Subtest: approve decision may omit a comment
+ok 61 - approve decision may omit a comment
+  ---
+  duration_ms: 0.309005
+  type: 'test'
+  ...
+# Subtest: commercial approval snapshot accepts CEO review fields
+ok 62 - commercial approval snapshot accepts CEO review fields
+  ---
+  duration_ms: 1.152382
+  type: 'test'
+  ...
+# Subtest: commercial snapshot defaults safely for legacy or staged creation
+ok 63 - commercial snapshot defaults safely for legacy or staged creation
+  ---
+  duration_ms: 0.855957
+  type: 'test'
+  ...
+# Subtest: commercial snapshot rejects negative money and malformed currency
+ok 64 - commercial snapshot rejects negative money and malformed currency
+  ---
+  duration_ms: 0.370948
+  type: 'test'
+  ...
+# Subtest: commercial markup can represent a loss but cannot be below minus one hundred percent
+ok 65 - commercial markup can represent a loss but cannot be below minus one hundred percent
+  ---
+  duration_ms: 0.278418
+  type: 'test'
+  ...
+# Subtest: commercial discount percentage must remain between zero and one hundred
+ok 66 - commercial discount percentage must remain between zero and one hundred
+  ---
+  duration_ms: 0.289886
+  type: 'test'
+  ...
+# Subtest: commercial discount amounts and final total must reconcile
+ok 67 - commercial discount amounts and final total must reconcile
+  ---
+  duration_ms: 0.291348
+  type: 'test'
+  ...
+# Subtest: data checks default to not run instead of fabricating validation
+ok 68 - data checks default to not run instead of fabricating validation
+  ---
+  duration_ms: 0.158388
+  type: 'test'
+  ...
+# Subtest: data checks accept generator-produced pass and attention states
+ok 69 - data checks accept generator-produced pass and attention states
+  ---
+  duration_ms: 0.836287
+  type: 'test'
+  ...
+# Subtest: data check warnings reject control characters and excessive entries
+ok 70 - data check warnings reject control characters and excessive entries
+  ---
+  duration_ms: 0.483497
+  type: 'test'
+  ...
+# Subtest: quotation drafts allow incomplete work to autosave
+ok 71 - quotation drafts allow incomplete work to autosave
+  ---
+  duration_ms: 2.469192
+  type: 'test'
+  ...
+# Subtest: final tracker generation still rejects incomplete draft values
+ok 72 - final tracker generation still rejects incomplete draft values
+  ---
+  duration_ms: 2.006216
+  type: 'test'
+  ...
+# Subtest: draft save requires a monotonically positive client revision
+ok 73 - draft save requires a monotonically positive client revision
+  ---
+  duration_ms: 0.330747
+  type: 'test'
+  ...
+# Subtest: multi-supplier draft round-trip preserves autosave and recovery fields
+ok 74 - multi-supplier draft round-trip preserves autosave and recovery fields
+  ---
+  duration_ms: 0.361423
+  type: 'test'
+  ...
+# Subtest: draft rejects missing selections and duplicate supplier option identifiers
+ok 75 - draft rejects missing selections and duplicate supplier option identifiers
+  ---
+  duration_ms: 1.492203
+  type: 'test'
+  ...
+# Subtest: legacy v0.2.6 draft migrates into one selected supplier option
+ok 76 - legacy v0.2.6 draft migrates into one selected supplier option
+  ---
+  duration_ms: 0.193531
+  type: 'test'
+  ...
+# Subtest: accepts and normalizes a valid pilot tracker submission
+ok 77 - accepts and normalizes a valid pilot tracker submission
+  ---
+  duration_ms: 4.009297
+  type: 'test'
+  ...
+# Subtest: rejects invalid employee codes and empty item lists
+ok 78 - rejects invalid employee codes and empty item lists
+  ---
+  duration_ms: 0.866523
+  type: 'test'
+  ...
+# Subtest: preserves the direct Dummy Tracker endpoint limit of 25 flat items
+ok 79 - preserves the direct Dummy Tracker endpoint limit of 25 flat items
+  ---
+  duration_ms: 1.205402
+  type: 'test'
+  ...
+# Subtest: maps input fields into the exact 52-column MARK-UP layout
+ok 80 - maps input fields into the exact 52-column MARK-UP layout
+  ---
+  duration_ms: 0.498109
+  type: 'test'
+  ...
+# Subtest: creates one tracker row per line item with one shared Q Code
+ok 81 - creates one tracker row per line item with one shared Q Code
+  ---
+  duration_ms: 0.746763
+  type: 'test'
+  ...
+# Subtest: alternate supplier rows repeat item context and omit item-level remarks
+ok 82 - alternate supplier rows repeat item context and omit item-level remarks
+  ---
+  duration_ms: 0.39894
+  type: 'test'
+  ...
+1..82
+# tests 82
+# suites 0
+# pass 82
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 639.12463

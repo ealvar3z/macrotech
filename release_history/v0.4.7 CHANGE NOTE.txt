@@ -1,0 +1,38 @@
+MACROTECH QUOTATION PLATFORM - v0.4.7 DEMO
+Submission-Time Q-Code Assignment
+
+THIS REMAINS A TEST/PILOT BUILD.
+No production deployment is performed by this package.
+The live 2026 Tracker remains read-only. The Dummy Tracker remains the only
+Google Sheet write target.
+
+CHANGES IN v0.4.7
+
+1. CLEAR ASSIGNMENT STATE
+- Existing 2026 examples are labeled as records with an Existing code.
+- New quotations display Q-Code Pending in the dashboard and workspace.
+- The Q-Code is not an employee-editable input.
+
+2. SUBMISSION-TIME ASSIGNMENT
+- When Send for approval & assign Q-Code succeeds, the pilot assigns the next
+  non-production 26QDEM### code.
+- Required quotation validation and Q-Code assignment occur within the guarded
+  submission operation before the draft becomes Pending internal approval.
+- A repeated submission request for the same draft returns its first assignment.
+- Customer-negotiated revisions retain the assigned RFQ Q-Code.
+- Pre-submission preview output uses Q-CODE-PENDING without assigning or consuming
+  an official-looking pilot sequence number.
+
+3. PRODUCTION BOUNDARY
+- DEM identifies pilot-only codes and prevents confusion with real assignments.
+- Production will replace the local sequence with a secured central transactional
+  allocator so concurrent employees cannot receive duplicate official Q-Codes.
+- This update does not read from or write to any production numbering system.
+
+PRESERVED WITHOUT BUSINESS-LOGIC CHANGES
+- Automatic customer pricing and existing Tracker calculation logic.
+- CO SBM in Tracker column E.
+- Selected and alternate supplier behavior.
+- Internal approval separate from customer PO acceptance.
+- Partial PO quantities and quotation revisions.
+- Customer-private supplier information.

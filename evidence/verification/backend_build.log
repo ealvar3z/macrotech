@@ -1,0 +1,30 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> macrotech-approval-platform@0.3.0-readiness.1 build
+> npm run build -w web && npm run build -w api && npm run build -w worker
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @macrotech/approval-web@0.3.0-readiness.1 build
+> tsc --noEmit && vite build
+
+vite v8.2.2 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.55 kB │ gzip:  0.32 kB
+dist/assets/index-KXNiu08_.css   14.64 kB │ gzip:  3.61 kB
+dist/assets/index-iGGE-qui.js   150.96 kB │ gzip: 42.01 kB
+
+✓ built in 216ms
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @macrotech/approval-api@0.3.0-readiness.1 build
+> tsc
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @macrotech/approval-worker@0.3.0-readiness.1 build
+> tsc
+

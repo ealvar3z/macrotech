@@ -1,0 +1,178 @@
+TAP version 13
+# Subtest: email header values cannot inject CRLF headers
+ok 1 - email header values cannot inject CRLF headers
+  ---
+  duration_ms: 1.20363
+  type: 'test'
+  ...
+# Subtest: subjects are RFC 2047 encoded after sanitization
+ok 2 - subjects are RFC 2047 encoded after sanitization
+  ---
+  duration_ms: 0.310737
+  type: 'test'
+  ...
+# Subtest: status labels are human readable
+ok 3 - status labels are human readable
+  ---
+  duration_ms: 0.12632
+  type: 'test'
+  ...
+# Subtest: event ids are safe for deterministic Message-ID values
+ok 4 - event ids are safe for deterministic Message-ID values
+  ---
+  duration_ms: 0.232499
+  type: 'test'
+  ...
+# Subtest: Firestore document path is parsed from CloudEvent subject
+ok 5 - Firestore document path is parsed from CloudEvent subject
+  ---
+  duration_ms: 0.170556
+  type: 'test'
+  ...
+# Subtest: Firestore document path is parsed from event body name
+ok 6 - Firestore document path is parsed from event body name
+  ---
+  duration_ms: 0.444127
+  type: 'test'
+  ...
+# Subtest: missing Firestore document path is rejected
+ok 7 - missing Firestore document path is rejected
+  ---
+  duration_ms: 0.291358
+  type: 'test'
+  ...
+# Subtest: commercial money labels use Philippine currency formatting
+ok 8 - commercial money labels use Philippine currency formatting
+  ---
+  duration_ms: 13.715317
+  type: 'test'
+  ...
+# Subtest: commercial percentage labels preserve useful precision
+ok 9 - commercial percentage labels preserve useful precision
+  ---
+  duration_ms: 0.67824
+  type: 'test'
+  ...
+# Subtest: data checks report passed only when every validation category passed
+ok 10 - data checks report passed only when every validation category passed
+  ---
+  duration_ms: 0.34561
+  type: 'test'
+  ...
+# Subtest: data check warnings force attention even if category states passed
+ok 11 - data check warnings force attention even if category states passed
+  ---
+  duration_ms: 0.138137
+  type: 'test'
+  ...
+# Subtest: missing or partial data checks never fabricate a pass
+ok 12 - missing or partial data checks never fabricate a pass
+  ---
+  duration_ms: 0.32597
+  type: 'test'
+  ...
+# Subtest: Gmail message embeds the official Macrotech logo without an external URL
+ok 13 - Gmail message embeds the official Macrotech logo without an external URL
+  ---
+  duration_ms: 1015.148553
+  type: 'test'
+  ...
+# Subtest: approval notification surfaces commercial review fields
+ok 14 - approval notification surfaces commercial review fields
+  ---
+  duration_ms: 20.151643
+  type: 'test'
+  ...
+# Subtest: notification HTML matches the Macrotech application theme
+ok 15 - notification HTML matches the Macrotech application theme
+  ---
+  duration_ms: 1.320395
+  type: 'test'
+  ...
+# Subtest: approval notification uses compact PHP amount in the subject
+ok 16 - approval notification uses compact PHP amount in the subject
+  ---
+  duration_ms: 0.464098
+  type: 'test'
+  ...
+# Subtest: approval notification preserves USD
+ok 17 - approval notification preserves USD
+  ---
+  duration_ms: 0.474753
+  type: 'test'
+  ...
+# Subtest: approved decision notification preserves USD
+ok 18 - approved decision notification preserves USD
+  ---
+  duration_ms: 0.475024
+  type: 'test'
+  ...
+# Subtest: returned decision notification makes correction action explicit
+ok 19 - returned decision notification makes correction action explicit
+  ---
+  duration_ms: 0.630127
+  type: 'test'
+  ...
+# Subtest: notification links are review-only
+ok 20 - notification links are review-only
+  ---
+  duration_ms: 0.507413
+  type: 'test'
+  ...
+# Subtest: notification HTML escapes customer and decision comments
+ok 21 - notification HTML escapes customer and decision comments
+  ---
+  duration_ms: 0.856197
+  type: 'test'
+  ...
+# Subtest: approval notification omits unavailable subtotal and VAT
+ok 22 - approval notification omits unavailable subtotal and VAT
+  ---
+  duration_ms: 0.530708
+  type: 'test'
+  ...
+# Subtest: approval notifications omit discount fields when no discount was entered
+ok 23 - approval notifications omit discount fields when no discount was entered
+  ---
+  duration_ms: 0.842767
+  type: 'test'
+  ...
+# Subtest: validation warnings do not claim a pass
+ok 24 - validation warnings do not claim a pass
+  ---
+  duration_ms: 0.489966
+  type: 'test'
+  ...
+# Subtest: parallel outbox claims invoke provider once with stable event ID
+ok 25 - parallel outbox claims invoke provider once with stable event ID
+  ---
+  duration_ms: 1.535147
+  type: 'test'
+  ...
+# Subtest: definite provider rejection retries with backoff and bounded attempts
+ok 26 - definite provider rejection retries with backoff and bounded attempts
+  ---
+  duration_ms: 0.456526
+  type: 'test'
+  ...
+# Subtest: lost acknowledgement is uncertain, never blindly resent or logged with secret text
+ok 27 - lost acknowledgement is uncertain, never blindly resent or logged with secret text
+  ---
+  duration_ms: 0.443878
+  type: 'test'
+  ...
+# Subtest: expired sending lease requires reconciliation and stale owner is fenced
+ok 28 - expired sending lease requires reconciliation and stale owner is fenced
+  ---
+  duration_ms: 0.245259
+  type: 'test'
+  ...
+1..28
+# tests 28
+# suites 0
+# pass 28
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1164.119991

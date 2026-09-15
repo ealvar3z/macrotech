@@ -1,0 +1,30 @@
+MACROTECH DUMMY TRACKER FORMULA SAFETY
+Template version: 2026-TR-MARK-UP-v1-2026-09-12
+
+VERIFIED TEMPLATE
+- MARK-UP contains the exact 52-column 2026 header and a blank formula row at row 3.
+- ACTUAL contains the exact 71-column header required by the MARK-UP lookup formula.
+- _PILOT_CONFIG is hidden and records the template version and input-only policy.
+- Test quotation rows begin at row 6. No real quotation records were copied.
+
+PROTECTED CALCULATED COLUMNS
+P, U, X, Z, AA, AC, AE, AF, AG, AH, AJ, AK, AN, AQ, AR, AS, AT, AU
+
+AB and AC retain Macrotech's conditional behavior: AB is blank or a safety-factor
+formula; AC is the standard landed-cost formula, the local-purchase formula, or an
+explicit TLC/local cost basis where that existing Macrotech mode applies.
+
+WRITE TRANSACTION
+1. Verify headers, policy, template version, and every template formula.
+2. Snapshot the exact destination cells, formatting, validation, notes, and height.
+3. Copy formula/format/validation from Dummy row 3.
+4. Write only input cells and the permitted conditional AB/AC behavior.
+5. Verify Q-Code, every protected formula, formatting, validation, and height.
+6. If any check fails, restore the pre-write snapshot and report a blocking error.
+
+The synchronization path contains no live 2026 Tracker read or write. The live
+Tracker is used only by separately guarded read-only import/setup functions.
+
+RECOVERY BACKUP CREATED BEFORE TEMPLATE REBUILD
+Macrotech Automated Fill Pilot Tracker - DUMMY BACKUP 2026-09-12
+https://docs.google.com/spreadsheets/d/1J9BUyuzLrPIPfTreY14fcv5Ys91yNICx-fSoYPbgbfg/edit

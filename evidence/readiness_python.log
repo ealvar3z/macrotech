@@ -1,0 +1,116 @@
+test_send_only_credentials_use_identity_service_not_mailbox_profile (test_connection_prep.SenderIdentityTests.test_send_only_credentials_use_identity_service_not_mailbox_profile) ... ok
+test_verified_selected_identity_required (test_connection_prep.SenderIdentityTests.test_verified_selected_identity_required) ... ok
+test_approval_notification_token_is_signed_and_expires (test_demo.DemoDomainTests.test_approval_notification_token_is_signed_and_expires) ... ok
+test_co_sbm_defaults_to_na_for_new_and_blank_imports (test_demo.DemoDomainTests.test_co_sbm_defaults_to_na_for_new_and_blank_imports) ... ok
+test_compiled_dashboard_matches_release_source (test_demo.DemoDomainTests.test_compiled_dashboard_matches_release_source) ... ok
+test_complete_formula_verification_is_blocking (test_demo.DemoDomainTests.test_complete_formula_verification_is_blocking) ... ok
+test_customer_directory_contains_company_specific_contacts (test_demo.DemoDomainTests.test_customer_directory_contains_company_specific_contacts) ... ok
+test_customer_directory_does_not_invent_missing_company_fields (test_demo.DemoDomainTests.test_customer_directory_does_not_invent_missing_company_fields) ... ok
+test_customer_negotiation_creates_preserved_next_revision (test_demo.DemoDomainTests.test_customer_negotiation_creates_preserved_next_revision) ... ok
+test_customer_price_field_cannot_override_formula (test_demo.DemoDomainTests.test_customer_price_field_cannot_override_formula) ... ok
+test_customer_total_labels_are_canonical_everywhere (test_demo.DemoDomainTests.test_customer_total_labels_are_canonical_everywhere) ... ok
+test_customer_web_preview_excludes_supplier_identity (test_demo.DemoDomainTests.test_customer_web_preview_excludes_supplier_identity) ... ok
+test_demo_q_code_allocator_uses_next_available_sequence (test_demo.DemoDomainTests.test_demo_q_code_allocator_uses_next_available_sequence) ... ok
+test_directory_requests_persist_and_deduplicate (test_demo.DemoDomainTests.test_directory_requests_persist_and_deduplicate) ... ok
+test_discount_is_applied_only_after_original_grand_total (test_demo.DemoDomainTests.test_discount_is_applied_only_after_original_grand_total) ... ok
+test_dummy_input_blocks_never_include_canonical_formula_columns (test_demo.DemoDomainTests.test_dummy_input_blocks_never_include_canonical_formula_columns) ... ok
+test_dummy_sink_rejects_unapproved_draft_before_google_access (test_demo.DemoDomainTests.test_dummy_sink_rejects_unapproved_draft_before_google_access) ... ok
+test_dummy_tracker_is_blocked_as_employee_import_source (test_demo.DemoDomainTests.test_dummy_tracker_is_blocked_as_employee_import_source) ... ok
+test_email_is_allowlisted_and_not_a_workflow_dependency (test_demo.DemoDomainTests.test_email_is_allowlisted_and_not_a_workflow_dependency) ... ok
+test_employee_q_code_is_read_only_until_submission (test_demo.DemoDomainTests.test_employee_q_code_is_read_only_until_submission) ... ok
+test_firebase_emulator_and_role_rules_are_packaged (test_demo.DemoDomainTests.test_firebase_emulator_and_role_rules_are_packaged) ... ok
+test_first_approver_wins_and_later_approver_sees_authoritative_state (test_demo.DemoDomainTests.test_first_approver_wins_and_later_approver_sees_authoritative_state) ... ok
+test_full_google_sheet_url_is_reduced_to_id (test_demo.DemoDomainTests.test_full_google_sheet_url_is_reduced_to_id) ... ok
+test_internal_approval_does_not_equal_customer_acceptance (test_demo.DemoDomainTests.test_internal_approval_does_not_equal_customer_acceptance) ... ok
+test_internal_submission_comment_is_not_in_customer_preview (test_demo.DemoDomainTests.test_internal_submission_comment_is_not_in_customer_preview) ... ok
+test_live_and_dummy_ids_are_distinct (test_demo.DemoDomainTests.test_live_and_dummy_ids_are_distinct) ... ok
+test_markup_multiplier_is_direct_tracker_input_and_controls_price (test_demo.DemoDomainTests.test_markup_multiplier_is_direct_tracker_input_and_controls_price) ... ok
+test_multi_supplier_import_and_exactly_one_selection (test_demo.DemoDomainTests.test_multi_supplier_import_and_exactly_one_selection) ... ok
+test_next_demo_dashboard_features_are_compiled (test_demo.DemoDomainTests.test_next_demo_dashboard_features_are_compiled) ... ok
+test_partial_po_quantity_is_distinct_from_internal_approval (test_demo.DemoDomainTests.test_partial_po_quantity_is_distinct_from_internal_approval) ... ok
+test_po_only_marks_selected_supplier_row (test_demo.DemoDomainTests.test_po_only_marks_selected_supplier_row) ... ok
+test_pre_submission_pdf_uses_pending_placeholder_without_assigning (test_demo.DemoDomainTests.test_pre_submission_pdf_uses_pending_placeholder_without_assigning) ... ok
+test_qjcg140_price_matches_live_2026_tracker_formula (test_demo.DemoDomainTests.test_qjcg140_price_matches_live_2026_tracker_formula) ... ok
+test_release_version_markers_are_aligned (test_demo.DemoDomainTests.test_release_version_markers_are_aligned) ... FAIL
+test_settings_about_identity_is_compiled (test_demo.DemoDomainTests.test_settings_about_identity_is_compiled) ... ok
+test_submission_assigns_q_code_once_and_retains_it (test_demo.DemoDomainTests.test_submission_assigns_q_code_once_and_retains_it) ... ok
+test_supplier_pending_cannot_use_manual_customer_price (test_demo.DemoDomainTests.test_supplier_pending_cannot_use_manual_customer_price) ... ok
+test_supplier_selection_changes_calculated_customer_price (test_demo.DemoDomainTests.test_supplier_selection_changes_calculated_customer_price) ... ok
+test_terms_baseline_and_versioned_publish (test_demo.DemoDomainTests.test_terms_baseline_and_versioned_publish) ... ok
+test_tracker_projection_selected_first_and_alternates_private (test_demo.DemoDomainTests.test_tracker_projection_selected_first_and_alternates_private) ... ok
+test_tracker_repeated_row_convention (test_demo.DemoDomainTests.test_tracker_repeated_row_convention) ... ok
+test_windows_build_package_is_complete_and_has_no_credentials (test_demo.DemoDomainTests.test_windows_build_package_is_complete_and_has_no_credentials) ... ok
+test_windows_builder_uses_short_isolated_retry_paths (test_demo.DemoDomainTests.test_windows_builder_uses_short_isolated_retry_paths) ... ok
+test_approval_percent_first_writer_and_revision_reset (test_iteration.IterationTests.test_approval_percent_first_writer_and_revision_reset) ... ok
+test_invalid_percentage_rejected (test_iteration.IterationTests.test_invalid_percentage_rejected) ... ok
+test_pending_projection_keeps_qcode_and_status_not_po (test_iteration.IterationTests.test_pending_projection_keeps_qcode_and_status_not_po) ... ok
+test_percentage_request_does_not_apply_until_approval (test_iteration.IterationTests.test_percentage_request_does_not_apply_until_approval) ... ok
+test_stale_autosave_cannot_revert_submitted_quote (test_iteration.IterationTests.test_stale_autosave_cannot_revert_submitted_quote) ... ok
+test_attachment_renaming_symlinks_and_bad_office_rejected (test_readiness090.ReadinessTests.test_attachment_renaming_symlinks_and_bad_office_rejected) ... ok
+test_audit_retention_does_not_silently_trim_history (test_readiness090.ReadinessTests.test_audit_retention_does_not_silently_trim_history) ... ok
+test_ceo_self_approval_requires_explicit_policy (test_readiness090.ReadinessTests.test_ceo_self_approval_requires_explicit_policy) ... ok
+test_invalid_discounts_never_silently_become_zero (test_readiness090.ReadinessTests.test_invalid_discounts_never_silently_become_zero) ... ok
+test_parallel_local_submissions_have_unique_qcodes (test_readiness090.ReadinessTests.test_parallel_local_submissions_have_unique_qcodes) ... ok
+test_preview_is_safe_responsive_conditional_and_private (test_readiness090.ReadinessTests.test_preview_is_safe_responsive_conditional_and_private) ... ok
+test_recalled_review_cannot_reapprove_from_old_payload (test_readiness090.ReadinessTests.test_recalled_review_cannot_reapprove_from_old_payload) ... ok
+test_reject_retains_immutable_revision_and_creates_correction (test_readiness090.ReadinessTests.test_reject_retains_immutable_revision_and_creates_correction) ... ok
+test_stale_save_rejected_without_overwriting_latest (test_readiness090.ReadinessTests.test_stale_save_rejected_without_overwriting_latest) ... ok
+test_submission_recovers_outbox_after_interruption (test_readiness090.ReadinessTests.test_submission_recovers_outbox_after_interruption) ... ok
+test_standard_actual_arithmetic (test_stability.ProfitWorksheetTests.test_standard_actual_arithmetic) ... ok
+test_unknown_inputs_not_assumed_zero (test_stability.ProfitWorksheetTests.test_unknown_inputs_not_assumed_zero) ... ok
+test_alternate_supplier_not_customer_total (test_stability.StabilityTests.test_alternate_supplier_not_customer_total) ... ok
+test_approved_pdf_uses_saved_payload (test_stability.StabilityTests.test_approved_pdf_uses_saved_payload) ... ok
+test_audit_visible_to_ceo_only (test_stability.StabilityTests.test_audit_visible_to_ceo_only) ... ok
+test_backup_preserves_prior_version (test_stability.StabilityTests.test_backup_preserves_prior_version) ... ok
+test_ceo_control_rejects_employee (test_stability.StabilityTests.test_ceo_control_rejects_employee) ... ok
+test_corruption_preserved (test_stability.StabilityTests.test_corruption_preserved) ... ok
+test_duplicate_item_numbers_blocked (test_stability.StabilityTests.test_duplicate_item_numbers_blocked) ... ok
+test_employee_cannot_approve (test_stability.StabilityTests.test_employee_cannot_approve) ... ok
+test_external_side_effects_disabled (test_stability.StabilityTests.test_external_side_effects_disabled) ... ok
+test_forged_po_status_rejected (test_stability.StabilityTests.test_forged_po_status_rejected) ... ok
+test_invalid_pricing_blocked (test_stability.StabilityTests.test_invalid_pricing_blocked) ... ok
+test_partial_po_quantity (test_stability.StabilityTests.test_partial_po_quantity) ... ok
+test_po_invalid_values_do_not_mutate (test_stability.StabilityTests.test_po_invalid_values_do_not_mutate) ... ok
+test_qcode_after_999 (test_stability.StabilityTests.test_qcode_after_999) ... ok
+test_recall_after_po_blocked (test_stability.StabilityTests.test_recall_after_po_blocked) ... ok
+test_recall_clears_approval_and_discount (test_stability.StabilityTests.test_recall_clears_approval_and_discount) ... ok
+test_revision_preserves_original_and_sequence (test_stability.StabilityTests.test_revision_preserves_original_and_sequence) ... ok
+test_usd_eur_php_calculation_reference (test_stability.StabilityTests.test_usd_eur_php_calculation_reference) ... ok
+test_forex_failure_and_reference_response_are_isolated (test_stability.TrackerTransactionTests.test_forex_failure_and_reference_response_are_isolated) ... ok
+test_formula_failure_rolls_back_mock_transaction (test_stability.TrackerTransactionTests.test_formula_failure_rolls_back_mock_transaction) ... ok
+test_assigned_archive_restore_preserves_code_and_history (test_workflow080.WorkflowTests.test_assigned_archive_restore_preserves_code_and_history) ... ok
+test_attachment_copy_survives_original_deletion (test_workflow080.WorkflowTests.test_attachment_copy_survives_original_deletion) ... ok
+test_attachment_rejects_executable_and_path_traversal (test_workflow080.WorkflowTests.test_attachment_rejects_executable_and_path_traversal) ... ok
+test_attachment_size_limit_prevents_copy (test_workflow080.WorkflowTests.test_attachment_size_limit_prevents_copy) ... ok
+test_delayed_autosave_cannot_resurrect_deleted_draft (test_workflow080.WorkflowTests.test_delayed_autosave_cannot_resurrect_deleted_draft) ... ok
+test_delete_only_unassigned_draft_and_backup (test_workflow080.WorkflowTests.test_delete_only_unassigned_draft_and_backup) ... ok
+test_employee_cannot_change_sync_or_open_master (test_workflow080.WorkflowTests.test_employee_cannot_change_sync_or_open_master) ... ok
+test_failed_write_retains_code_and_retry_identity (test_workflow080.WorkflowTests.test_failed_write_retains_code_and_retry_identity) ... ok
+test_forex_precision_and_metadata_survive_save (test_workflow080.WorkflowTests.test_forex_precision_and_metadata_survive_save) ... ok
+test_incompatible_mirror_stops_before_values_write (test_workflow080.WorkflowTests.test_incompatible_mirror_stops_before_values_write) ... ok
+test_legacy_comments_merge_without_duplicate_or_loss (test_workflow080.WorkflowTests.test_legacy_comments_merge_without_duplicate_or_loss) ... ok
+test_live_and_dummy_cannot_be_employee_mirrors (test_workflow080.WorkflowTests.test_live_and_dummy_cannot_be_employee_mirrors) ... ok
+test_master_failure_does_not_attempt_mirror (test_workflow080.WorkflowTests.test_master_failure_does_not_attempt_mirror) ... ok
+test_mirror_failure_never_rolls_back_master (test_workflow080.WorkflowTests.test_mirror_failure_never_rolls_back_master) ... ok
+test_mirror_never_reuses_master_row_addresses (test_workflow080.WorkflowTests.test_mirror_never_reuses_master_row_addresses) ... ok
+test_missing_attachment_is_reported (test_workflow080.WorkflowTests.test_missing_attachment_is_reported) ... ok
+test_onboarding_persists_after_restart (test_workflow080.WorkflowTests.test_onboarding_persists_after_restart) ... ok
+test_optional_comment_and_no_config_make_no_network_call (test_workflow080.WorkflowTests.test_optional_comment_and_no_config_make_no_network_call) ... ok
+test_reconnect_revokes_mirror_authorization (test_workflow080.WorkflowTests.test_reconnect_revokes_mirror_authorization) ... ok
+test_submit_auto_sync_and_approval_update_use_same_request (test_workflow080.WorkflowTests.test_submit_auto_sync_and_approval_update_use_same_request) ... ok
+
+======================================================================
+FAIL: test_release_version_markers_are_aligned (test_demo.DemoDomainTests.test_release_version_markers_are_aligned)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/47929e2e02e0/readiness/Macrotech_v0.9.0_PreApproval_Readiness/tests/test_demo.py", line 49, in test_release_version_markers_are_aligned
+    self.assertEqual(__version__, release_version)
+AssertionError: '0.8.0-demo' != '0.9.0-readiness.1'
+- 0.8.0-demo
++ 0.9.0-readiness.1
+
+
+----------------------------------------------------------------------
+Ran 100 tests in 0.655s
+
+FAILED (failures=1)

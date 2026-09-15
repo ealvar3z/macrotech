@@ -1,0 +1,132 @@
+MACROTECH WINDOWS PILOT DEMO - INSPECTION AND SAFETY REPORT
+Version 0.6.0-demo | 12 September 2026
+
+BASELINE INSPECTED
+The latest pilot was a React/TypeScript employee dashboard with a guarded local
+Python backend. It already had sample import, local draft storage, multi-supplier
+data, a Dummy projection, and initial quotation output. This release adds the
+approved formula-safe Dummy architecture without deploying production.
+
+READ-ONLY 2026 TRACKER INSPECTION
+Spreadsheet: 2026 TR
+ID: 1EO_bXeuM0X42nmMAzfVdaBFb1KyKQkq56Vmk6ukhCYY
+Tab: MARK-UP
+
+The connected inspection was read-only; no update operation was issued. Column E
+was confirmed as CO SBM. The bounded scan found 100 consecutive multi-supplier
+groups containing 163 alternate rows. Recognizable inspected examples included
+26QJCG140, 26QPJR023, and 26QPJR046.
+
+ACTUAL REPEATED-ROW RULE IMPLEMENTED
+- Selected supplier is emitted first; alternate suppliers immediately follow.
+- Item number appears on the selected/first row and is blank on alternates.
+- Description, due date, Q Code, offer date, RFQ, customer, buyer, UOM, and quantity
+  repeat on every supplier row, matching the inspected 2026 pattern.
+- Macrotech Offer is on the selected row. Supplier offer, CO SBM, supplier, costs,
+  lead time, forex, duty, markup, delivery, SR code, and remarks vary by row.
+- Internal notes and availability are never synchronized.
+- Only an accepted item's selected row receives AWARD TO MACRO = YES and PO.
+- Each supplier row retains its own MARK-UP multiplier. The selected supplier's
+  existing cost and MARK-UP inputs drive the automatic customer price.
+
+ISOLATION AND WRITE CONTROLS
+- Live and Dummy Tracker IDs are distinct fixed constants.
+- Live loader exposes reads only and stops if the account can modify live content.
+- Dummy writer stops unless its target is exactly the existing Dummy Tracker ID.
+- The 52 headers must match exactly; column E remains CO SBM.
+- The Dummy contains a cleared MARK-UP structure, blank ACTUAL header structure,
+  and hidden template version 2026-TR-MARK-UP-v1-2026-09-12. No real quotation
+  records were copied into the rebuilt template.
+- Synchronization does not read live 2026 data or formatting. It copies formulas,
+  formatting, validation, and row height from Dummy row 3, then writes only input
+  cells. Canonical calculated columns—including P and AT—are excluded.
+- Every required formula, Q Code, format, validation, and row height is verified.
+  Any mismatch is blocking and restores the exact pre-write row snapshot.
+- Request markers prevent accidental duplicate synchronization.
+- No Gmail, Firebase Hosting, Cloud Run, or deployment integration exists.
+- The supplied installed-app OAuth client has no user token, password, Gmail scope,
+  or service-account key. The user still chooses the authorized Google account.
+
+WORKFLOW AND PRIVACY
+RFQ/inquiry, quotation draft, internal approval, and customer PO acceptance are
+separate states. Internal approval cannot equal customer acceptance. PO acceptance
+supports individual lines and partial quantities. Negotiations create preserved
+R1/R2 revisions requiring new approval.
+
+Exactly one selected supplier drives the internal cost basis and automatic customer
+price. Supplier Pending remains valid while drafting, but submission and PDF
+generation require a complete selected cost basis. All supplier identities,
+alternates, costs, CO SBM, margins, forex, and internal notes are excluded from
+customer output.
+
+EMPLOYEE EXPERIENCE, TERMS, AND PDF
+The dashboard is labeled with the employee's name, shows Q assignment state and
+total VAT-IN, and accepts a full Sheet URL. Customer & Inquiry is visually distinct.
+Line items are accordions with separate Buyer Requirements, green-bordered
+Macrotech Offer, and private sourcing areas. Currency is PHP/USD; duty displays as
+a percentage while retaining decimal Tracker storage.
+
+The CEO simulation separates terms draft and publication. Submission snapshots the
+published terms version. The initial published baseline contains the 12 sections
+transcribed from the supplied Macrotech quotation template. The approved low-ink
+legal-size PDF emphasizes customer and RFQ, distinguishes requirements from offer,
+excludes sourcing data, and forces OFFER TERMS & CONDITIONS onto its final page.
+Approval automatically creates the PDF.
+
+VERIFICATION TARGETS
+- React + TypeScript production build and typecheck.
+- Domain, workflow, mapping, terms, release-integrity, and safety tests.
+- Offline application self-test.
+- Browser screenshots of dashboard and quotation workspace.
+- PDF render and visual inspection, including final Terms page.
+- Windows onedir application build and packaged executable self-test.
+
+WINDOWS VALIDATION BOUNDARY
+The final PyInstaller onedir app must be built and self-tested on Windows because
+this workspace is Linux and has no Windows execution layer. The included readable
+CMD/PowerShell build path performs the build and refuses success unless the
+packaged application passes its offline self-test.
+
+V0.6.0 RESILIENCE CONTROLS
+- Workflow state is independent of email delivery and is represented by a
+  Firestore-shaped store with quotations, users/roles, directory requests,
+  notification outbox, and audit events.
+- Role authorization is not tied to macrotech.quotations@gmail.com. Separate CEO,
+  approver, employee, and administrator identities are supported by the included
+  Firebase rules model.
+- Approval is first-writer-wins; later approvers receive the authoritative result.
+- Employee approval comments remain internal. Approved discounts are applied only
+  after the original GRAND TOTAL and are audit-recorded.
+- Gmail sending is a separate explicit allowlisted pilot action. No email was sent
+  during release construction, and notification failure cannot change quote state.
+- No Firebase, Cloud Run, Hosting, Gmail production setting, or live Tracker cell
+  was deployed or modified.
+
+V0.4.1 WINDOWS BUILD HOTFIX
+The v0.4.0 package unnecessarily rebuilt the already-compiled React dashboard on
+each Windows computer. That machine-dependent Vite/Rolldown stage failed during the
+first test. V0.4.1 packages the verified bundled dashboard directly, checks it is
+present and nonempty, and no longer downloads Node or runs npm on the test PC.
+
+V0.4.3 DEFENDER-SAFE BUILD REVISION
+Microsoft Defender classified the custom 2.5 KB Windows launcher as
+Trojan:Win32/Wacatac.B!ml because it directly invoked Command Prompt. The launcher
+has been removed from the distribution and must not be restored or allowed. The
+package now starts from a readable CMD/PowerShell script and produces an unpacked
+PyInstaller onedir application. This avoids both the custom command launcher and
+the one-file self-extraction pattern commonly scrutinized by antivirus products.
+Production still requires a properly code-signed Windows installer.
+
+V0.4.6 BASELINE CLEANUP
+Release-version markers now agree, the included dashboard dist is rebuilt from the
+matching source, customer total labels are canonical, and the documentation matches
+automatic-pricing and post-write warning behavior.
+
+V0.4.7 SUBMISSION-TIME Q-CODE ASSIGNMENT
+Existing imported 2026 records retain their already-assigned Q-Codes. New employee
+quotations display Q-Code Pending and do not expose an editable Q-Code field. After
+all submission validation succeeds, the isolated pilot assigns the next 26QDEM###
+code inside the guarded submission operation. Repeated submission requests for the
+same draft return the authoritative first assignment. Negotiated revisions retain
+the same RFQ Q-Code. Production still requires a central transactional allocator;
+the local DEM sequence is explicitly non-production.

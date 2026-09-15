@@ -1,0 +1,23 @@
+MACROTECH QUOTATION PLATFORM - v0.4.8 DEMO
+WINDOWS TEST HOTFIX
+11 September 2026
+
+PURPOSE
+This release corrects the Windows-only automated-test failure that prevented
+v0.4.7 from reaching the packaging step.
+
+FIXED
+- The pre-submission PDF regression test no longer asks Windows to open its
+  deliberately fake PDF path.
+- The test now safely simulates the Windows file-opening branch and verifies
+  that the pending Q-Code preview behavior remains correct.
+- The application behavior and v0.4.7 submission-time Q-Code assignment are
+  otherwise unchanged.
+
+SAFETY
+- This remains a TEST/PILOT build.
+- No production deployment is included.
+- No live 2026 Tracker write is enabled.
+- Test writes remain restricted to the configured Dummy Tracker.
+- Production Gmail, Firebase Hosting, and Cloud Run are not used.
+

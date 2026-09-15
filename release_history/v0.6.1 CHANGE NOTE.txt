@@ -1,0 +1,10 @@
+MACROTECH QUOTATION PLATFORM - v0.6.1 DEMO
+WINDOWS BUILD RELIABILITY FIX
+
+- Application features remain the verified v0.6.0 baseline.
+- PyInstaller receives source and resources from a short temporary path.
+- Packaging retries up to three clean attempts when Windows resource editing is
+  interrupted by a transient scanner or file lock.
+- An existing READY_TO_TEST build is preserved until the new EXE passes self-test.
+- The branded Macrotech application icon remains enabled.
+- No production deployment, Gmail send, Tracker write, or Firebase change.

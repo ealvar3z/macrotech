@@ -1,0 +1,59 @@
+MACROTECH v0.7.0 - EXECUTIVE REVIEW PILOT
+
+This is a local Windows pilot, not a production/cloud release.
+Extract into a fresh folder. Run BUILD WINDOWS EXE.cmd. The Windows build must
+finish and its EXE self-test must pass before using READY_TO_TEST.
+No Windows EXE was built in the Linux development workspace.
+
+WHAT TO REVIEW
+1. Sourcing currency note explains that all four charges share supplier currency.
+2. New discount requests and approvals use percentages of the original Grand Total.
+   Existing historical PHP discounts are preserved, not reinterpreted as percentages.
+3. In-app confirmations, prompts and notices use Macrotech-themed dialogs.
+4. Send for approval assigns a Q-Code then attempts a Dummy write while pending.
+   Google authorization/connectivity is needed for the real Dummy operation.
+   Failure retains the submission/code and exposes Retry Dummy write.
+   Approval/PO must update existing revision rows. No live Tracker writes permitted.
+5. CEO branding is larger with white artwork and subtitle.
+6. Executive summary cards filter the quotation list.
+7. Sidebar links use ivory text and a pale selected state.
+8. History groups revision ancestry, shows latest first, supports search and 10/page.
+9. CEO can create and self-approve; demo Approver needs the CEO's permission setting.
+   Roles are locally simulated, not authenticated authorization for deployment.
+10. Pending requests open a compact financial review with expandable details.
+11. Approval confirmation shows Q-Code, customer, discount and final amount; after
+    acknowledgement it opens the next request or returns to an empty queue.
+12. Command center shows approvals, pending POs, release deadlines and employee
+    on-time submission rankings. Missing historical timestamps are not scored.
+    Preparation time excludes approval waiting. It measures elapsed draft time,
+    not hours worked. Actual customer-release ranking needs delivery integration.
+    Contact edit/approve/reject and notification routing are in Administration.
+13. Send to Customer opens a local Gmail-style composer: From, To, CC, BCC,
+    subject, message and approved PDF review. Save email draft persists locally.
+    SEND IS DISABLED: no Gmail integration test or remote portal is configured.
+    A saved email draft does not mark a quotation released or customer-accepted.
+
+READ-ONLY TRACKER CHECK
+Live MARK-UP AD1:AZ1 and ACTUAL A1:BS1 were inspected for discount columns.
+Neither header contains a dedicated customer discount field. Percentage + amount
+are therefore recorded in existing Additional Remarks, without changing formulas.
+Macrotech's production discount accounting mapping still needs business validation.
+
+TESTING LIMITS
+React/TypeScript and isolated Python business tests are run for this release.
+Browser visual QA was blocked because Chromium was unavailable and its download
+timed out. Review the actual Windows rendering before accepting this iteration.
+No live Google Sheet writes, messages, Firebase or Cloud Run changes were performed.
+Existing Gmail routing code remains available in Administration but unverified;
+do not confuse it with a working remote approval portal.
+
+PARKING LOT
+- Employee online/away/offline, last seen and daily check-in (future/post-deployment).
+- Customer logos.
+- Quotation images/file attachments.
+- Production cloud identity, shared storage, backup and multi-computer integration.
+
+IMPORTANT
+This document supersedes conflicting workflow descriptions in older change notes.
+Do not disable antivirus or add exclusions to resolve build errors. Capture the
+full build error and Windows Security finding for review.

@@ -1,0 +1,11 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Production policy: browsers never read or write approval data directly.
+    // Cloud Run / Admin SDK uses IAM and is not governed by these client rules.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

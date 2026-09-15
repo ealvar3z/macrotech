@@ -1,0 +1,78 @@
+MACROTECH QUOTATION PLATFORM — v0.4.5 DEMO
+Brand, Workflow Hierarchy, Pricing/Total Reconciliation, and Review Fixes
+
+THIS REMAINS A TEST/PILOT BUILD.
+No production deployment is performed by this package.
+The live 2026 Tracker remains read-only. Dummy Tracker is the only Sheet write target.
+
+CHANGES IN v0.4.5
+
+1. MACROTECH BRANDING
+- The left navigation now uses the official MACROTECH wordmark asset rather than recreating the wordmark with a generic font.
+- "INDUSTRIAL TRADING" is paired below the wordmark for a consistent corporate lockup.
+- The application body uses a Windows-safe condensed professional typography stack led by Bahnschrift.
+- The customer web preview and generated quotation PDF use the same MACROTECH brand treatment.
+- The supplied full logo JPG is included under assets/macrotech_full_logo.jpg as the official visual reference.
+
+NOTE ON FONT IDENTIFICATION
+The MACROTECH wordmark appears to be custom/modified geometric lettering. v0.4.5 does not approximate it with a substitute font; it uses the official logo artwork directly. "INDUSTRIAL TRADING" is treated as a condensed bold sans style, using Windows-safe fallbacks in the application.
+
+2. NEW QUOTATION WORKFLOW
+- Added a prominent "+ New Quotation" action on the Employee Dashboard.
+- Employees can start a quotation directly in the platform without starting in Google Sheets.
+- A manually created quotation includes an editable Macrotech Q-Code field and follows the same approval/calculation rules as imported quotations.
+
+3. LINE-ITEM HIERARCHY
+- Removed the confusing 1 / 2 / 3 section numbering.
+- Line items now visually communicate the business relationship:
+  Buyer Requirement
+    -> Macrotech Offer
+       -> Supplier Sourcing (Internal Only)
+- Supplier Sourcing is visibly nested under the Macrotech Offer.
+- Macrotech Offer is visibly presented as the response to the Buyer Requirement.
+- Expand/collapse behavior now uses a smooth accordion transition in the source dashboard.
+
+4. SIMILAR-ITEM DIFFERENCE ASSIST
+- Similar Buyer Requirement descriptions are compared.
+- When two line items are substantially similar but contain different tokens (for example size/model differences), the line summary shows a difference hint so the employee does not have to hunt for the change manually.
+
+5. CUSTOMER PRICE BUSINESS RULE
+- Customer unit price remains fully calculated from Macrotech's existing 2026 Tracker formula chain.
+- No employee manual customer-price override is provided.
+- To change the selling price, the employee changes legitimate upstream inputs such as the MARK-UP multiplier.
+
+6. CUSTOMER TOTALS / TEMPLATE RECONCILIATION
+- Added Total Quantity to the Customer Totals card.
+- Customer total labels now follow the Template Quotation structure:
+  TOTAL VATABLE AMOUNT (VAT EX AMT, IN PHP)
+  VAT AMOUNT - 12%
+  GRAND TOTAL (VAT IN AMT, IN PHP)
+- Aggregate calculation follows the Template Quotation and 2026 Tracker chain, preserving unrounded intermediate commercial math until the displayed monetary total is rounded.
+
+7. APPROVED PDF NOTICE
+- The "Approved quotation is ready" notice is moved to a prominent position immediately below the quotation workspace header instead of appearing only at the bottom of the page.
+- Open approved PDF remains grouped with the main quotation action buttons.
+
+8. OFFER TERMS & CONDITIONS
+- Final legal page title is now exactly: OFFER TERMS & CONDITIONS
+- MACROTECH brand lockup appears above the title.
+- Baseline text is the 12-section wording transcribed from TEMPLATE_ QUOTATION BLANK (1).
+- Existing pilot installs using the older baseline cancellation-only text are automatically migrated to the supplied template baseline when still on Baseline version 1.
+- The Terms page remains the final page of the generated quotation PDF.
+
+9. DUMMY TRACKER POST-WRITE VERIFICATION
+- Successful Dummy Tracker writes are no longer treated as failed solely because a post-write formula/format verification response has an unexpected shape.
+- Row identity verification remains a hard safety check.
+- Formula/format verification anomalies are returned as warnings after the successful write, allowing the app to persist the Dummy row range and preventing accidental duplicate rows from repeated clicks.
+
+10. WINDOWS BUILD PROCESS
+- The Windows build now compiles the React + TypeScript dashboard from the exact source in this version before PyInstaller packaging.
+- A private pinned Node.js builder is downloaded under .windows-builder when needed, similar to the existing private Python builder.
+- This ensures the generated .exe contains the v0.4.5 dashboard rather than a stale prior dist bundle.
+
+VALIDATION
+- Python application tests: 18 passed.
+- Python modules compile successfully.
+- Sample quotation PDF generated successfully.
+- Sample PDF produced 2 pages with OFFER TERMS & CONDITIONS as the final page.
+- No production or live Tracker write was performed during this update.

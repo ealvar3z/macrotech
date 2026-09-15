@@ -1,0 +1,12 @@
+{
+  "primary_development_baseline": "0.9.0-readiness.2",
+  "successor": "0.10.0-tallies.1",
+  "verified_original_files": 286,
+  "mismatches": [],
+  "baseline_test_counts": {
+    "python": 101,
+    "api": 82,
+    "worker": 28
+  },
+  "note": "v0.8.0 is retained only as historical rollback ancestry."
+}

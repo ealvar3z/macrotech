@@ -1,0 +1,44 @@
+MACROTECH DUMMY TRACKER STRUCTURAL AUDIT - v0.6.0
+Date: 2026-09-12
+
+SAFETY BOUNDARY
+- This was a read-only comparison. No values, formulas, formatting, permissions,
+  or metadata were written to 2026 TR or the Dummy Tracker during this audit.
+- Live 2026 TR ID: 1EO_bXeuM0X42nmMAzfVdaBFb1KyKQkq56Vmk6ukhCYY
+- Dummy Tracker ID: 1x0rBTW1uhdQqwR9nNjduqEQOXvDEw5O3IybbW2lA0M8
+
+VERIFIED MATCHES
+- MARK-UP: 52 columns, first row frozen, first four columns frozen in both.
+- ACTUAL: 71 columns, first row frozen, first four columns frozen in both.
+- MARK-UP A1:AZ1: values, user-entered formats, validations, and notes match.
+- ACTUAL A1:BS1: values, user-entered formats, validations, and notes match.
+- Live MARK-UP reference row 2125 and Dummy blank template row 3: user-entered
+  formats, validations, and notes match.
+- All 18 protected/canonical MARK-UP formulas match after normalizing row numbers.
+
+EXPECTED DIFFERENCE
+- Live MARK-UP O2125 contains the employee-entered expression =33+18. Column O
+  is an input column, not a protected calculated column. The Dummy blank template
+  correctly leaves that input empty. It must not be copied as a template formula.
+
+WRITE CONTRACT
+- The app copies the versioned blank Dummy template row.
+- It writes only approved input blocks.
+- It never writes formula columns such as P.
+- Formula presence is checked before and after the write.
+- A failed verification restores the affected rows from the pre-write snapshot.
+- A successful write is retained when only the verification response shape is
+  unexpected; that condition is reported as a warning rather than a false failure.
+
+LIMIT OF THIS API-LEVEL AUDIT
+- Google Sheets returned grid dimensions, frozen panes, cell formats, validations,
+  notes, and formulas. It did not expose a reliable detailed comparison of every
+  individual column width and row height in the bounded response used here.
+- The existing Dummy template remains the visual source of truth. The writer copies
+  its blank row rather than recreating styling. A final human visual spot-check in
+  Google Sheets remains on the release checklist for column widths, row heights,
+  conditional formatting, hidden rows/columns, and protected-range presentation.
+
+RESULT
+PASS for formula-safe application writes and verified cell-level parity.
+VISUAL SPOT-CHECK remains required before any production rollout.

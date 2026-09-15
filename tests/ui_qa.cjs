@@ -1,0 +1,23 @@
+const {chromium}=require('playwright');
+(async()=>{
+ const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+ const page=await browser.newPage({viewport:{width:1500,height:1000}});
+ const errors=[];page.on('pageerror',e=>errors.push(String(e)));
+ await page.addInitScript(()=>{window.pywebview={api:new Proxy({}, {get:(_,name)=>async(...args)=>{const r=await fetch('/api',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,args})});const data=await r.json();if(data.error)throw Error(data.error);return data.result}})}});
+ await page.goto('http://127.0.0.1:8766');
+ await page.getByText('My Quotations',{exact:true}).waitFor();
+ await page.locator('.role-switch select').selectOption('CEO');
+ await page.getByRole('heading',{name:'CEO Command Center'}).waitFor();
+ await page.screenshot({path:'/workspace/scratch/1b4b9a623104/v070/ceo-preview.png',fullPage:true});
+ await page.locator('.text-action').first().click();
+ await page.getByRole('button',{name:'Approve & next request'}).waitFor();
+ await page.screenshot({path:'/workspace/scratch/1b4b9a623104/v070/approval-preview.png',fullPage:true});
+ await page.getByLabel('Approved discount percentage').fill('5');
+ await page.getByRole('button',{name:'Approve & next request'}).click();
+ await page.getByRole('button',{name:'Continue',exact:true}).click();
+ await page.getByRole('button',{name:'Got it',exact:true}).waitFor();
+ await page.getByRole('button',{name:'Got it',exact:true}).click();
+ if(errors.length)throw Error(errors.join('\n'));
+ console.log('UI QA passed: CEO dashboard, focused review, themed confirmation, percentage approval, next request.');
+ await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

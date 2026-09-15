@@ -1,0 +1,50 @@
+[
+  {
+    "check": "desktop_build",
+    "exit": 0,
+    "seconds": 0.85
+  },
+  {
+    "check": "python_offline",
+    "exit": 0,
+    "seconds": 0.81,
+    "tests": 107
+  },
+  {
+    "check": "desktop_selftest",
+    "exit": 0,
+    "seconds": 0.13
+  },
+  {
+    "check": "backend_typecheck",
+    "exit": 0,
+    "seconds": 2.55
+  },
+  {
+    "check": "api_offline",
+    "exit": 0,
+    "seconds": 0.71,
+    "tests": 82
+  },
+  {
+    "check": "worker_offline",
+    "exit": 0,
+    "seconds": 1.23,
+    "tests": 28
+  },
+  {
+    "check": "backend_build",
+    "exit": 0,
+    "seconds": 3.02
+  },
+  {
+    "check": "document_samples",
+    "exit": 0,
+    "seconds": 0.24
+  },
+  {
+    "check": "python_source_parse",
+    "exit": 0,
+    "files": 15
+  }
+]

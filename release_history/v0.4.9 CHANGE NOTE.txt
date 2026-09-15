@@ -1,0 +1,28 @@
+MACROTECH QUOTATION PLATFORM - v0.4.9 DEMO
+CUSTOMER DIRECTORY AUTOCOMPLETE
+11 September 2026
+
+ADDED
+- Read-only customer directory snapshot derived from 2026 TR MARK-UP J:K.
+- 64 searchable company/customer labels and 122 associated contacts.
+- Company autocomplete supports partial typing such as GNP for GNPD/GNPK.
+- Buyer suggestions are filtered to the selected company.
+- A sole known contact is filled automatically; multiple contacts require the
+  employee to choose the correct buyer.
+- Free-text entry remains available for new customers and new contacts.
+- Exact raw Tracker wording is preserved for Dummy Tracker synchronization.
+
+NOT ADDED
+- No address, TIN, phone, legal-name, or buyer-role values were invented.
+- No live customer master was created or modified.
+- No live 2026 TR cells were changed.
+- No production service was deployed or contacted.
+
+PRESERVED
+- Submission-time Q-Code assignment.
+- Multiple suppliers per item and one selected cost basis.
+- Private alternate suppliers and repeated Dummy Tracker rows.
+- Macrotech pricing/VAT calculation logic.
+- Internal approval and customer PO acceptance remain separate.
+- Partial PO acceptance by line and quantity.
+

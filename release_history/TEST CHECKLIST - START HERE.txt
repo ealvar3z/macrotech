@@ -1,0 +1,99 @@
+MACROTECH QUOTATION PLATFORM v0.6.0 — PILOT TEST CHECKLIST
+
+BUILD
+1. Extract the entire ZIP.
+2. Keep the whole folder together.
+3. Run BUILD WINDOWS EXE.cmd.
+4. When complete, open READY_TO_TEST\Macrotech Quotation Pilot Demo\Macrotech Quotation Pilot Demo.exe.
+
+REVIEW THESE v0.6.0 ITEMS
+
+Q-CODE ASSIGNMENT
+[ ] Existing 2026 reference rows say Existing code.
+[ ] Click + New Quotation and confirm it says Q-Code Pending.
+[ ] Confirm the employee cannot type or change the Q-Code.
+[ ] Complete the quotation and click Send for approval & assign Q-Code.
+[ ] Confirm a 26QDEM### code appears and the status becomes Pending internal approval.
+[ ] Reopen the saved submission and confirm the same code remains assigned.
+
+A. BRANDING
+[ ] Official MACROTECH wordmark appears cleanly in the left menu.
+[ ] INDUSTRIAL TRADING appears beneath the wordmark.
+[ ] Branding is consistent in customer preview and generated quotation PDF.
+
+B. NEW QUOTATION
+[ ] Click + New Quotation from Employee Dashboard.
+[ ] Confirm a blank quotation opens without using Google Sheets.
+[ ] Confirm Q-Code shows Pending and cannot be manually entered.
+[ ] Enter RFQ/PR, customer, buyer, and line data.
+[ ] Send for approval and confirm a demo Q-Code is assigned once.
+[ ] Confirm autosave works.
+
+C. CUSTOMER DIRECTORY
+[ ] In Company / customer, type GNP.
+[ ] Confirm GNPD and GNPK appear as company choices.
+[ ] Select GNPK and confirm only GNPK buyer/contact suggestions appear.
+[ ] Select GNPD and confirm only GNPD buyer/contact suggestions appear.
+[ ] Confirm a new customer and buyer can still be typed manually.
+[ ] Confirm no address, TIN, or phone value is invented.
+
+D. LINE-ITEM HIERARCHY
+[ ] No 1 / 2 / 3 section numbers appear.
+[ ] Buyer Requirement looks like the parent level.
+[ ] Macrotech Offer is visibly nested/responding to Buyer Requirement.
+[ ] Supplier Sourcing is visibly nested under Macrotech Offer.
+[ ] Expand/collapse feels smooth and natural.
+
+E. SIMILAR ITEM DIFFERENCE
+[ ] Open a quotation with highly similar item descriptions.
+[ ] Confirm a difference hint appears when size/model tokens differ.
+
+F. PRICING
+[ ] Customer unit price is calculated only; no manual input exists.
+[ ] Change MARK-UP multiplier and confirm calculated customer unit price changes.
+[ ] Switch selected supplier and confirm calculated price updates.
+
+G. CUSTOMER TOTALS
+[ ] Total Quantity appears.
+[ ] TOTAL VATABLE AMOUNT is correct.
+[ ] VAT AMOUNT - 12% is correct.
+[ ] GRAND TOTAL is correct.
+[ ] Compare the result with Template Quotation Blank and 2026 Tracker logic.
+
+H. APPROVED PDF
+[ ] After internal approval, approved-PDF notice appears near the top.
+[ ] Open Approved PDF is directly inside the top banner.
+[ ] Show in Folder works and no redundant Save a Copy button appears.
+
+I. OFFER TERMS & CONDITIONS
+[ ] Final PDF page says OFFER TERMS & CONDITIONS.
+[ ] MACROTECH logo is above the title.
+[ ] 12 numbered terms appear.
+[ ] Terms page is the final PDF page.
+
+J. DUMMY TRACKER
+[ ] Click Write approved revision to Dummy once.
+[ ] Confirm rows populate successfully.
+[ ] Enter Duty rate 7 and confirm it remains displayed as 7%, not 7.000000001%.
+[ ] Write an approved revision and confirm P, U, X, Z, AA, AC, AE:AH, AJ:AK, AN, AQ:AU remain formulas.
+[ ] Confirm a successful message names formula-safe template 2026-TR-MARK-UP-v1-2026-09-12.
+[ ] Confirm any forced formula/template mismatch blocks the write and restores the previous row.
+
+K. CUSTOMER PRIVACY
+[ ] Customer preview/PDF does NOT show supplier identity, supplier cost, CO SBM, markup, forex, or internal notes.
+
+L. ROLE, DISCOUNT, AND CONTINUITY
+[ ] Click each employee summary card and confirm the saved list filters immediately.
+[ ] Switch to CEO and confirm CEO appears below the Macrotech logo.
+[ ] Switch to Approver and confirm CEO Terms Control is not available.
+[ ] Submit with an internal comment; confirm leaders see it and customer output does not.
+[ ] Request a discount and confirm GRAND TOTAL does not change while pending.
+[ ] Approve a discount and confirm it appears after GRAND TOTAL, followed by FINAL TOTAL.
+[ ] Try a second approver and confirm the original approver/discount remains authoritative.
+[ ] Request and approve a company/contact, then confirm it becomes autocomplete data.
+[ ] Select EUR and use Current Rate; confirm rate source/time is frozen on the revision.
+[ ] With email routing disabled or failing, confirm employees can still submit and leaders can approve.
+[ ] Add only confirmed test recipients before clicking Retry queued notifications.
+[ ] Review the Firestore collection explorer and FIRESTORE AND CONTINUITY GUIDE.txt.
+
+DO NOT DEPLOY TO PRODUCTION DURING THIS PILOT REVIEW.

@@ -1,0 +1,8 @@
+{
+  "credential_filenames": 0,
+  "credential_value_patterns": 0,
+  "scope": "Packaged files only; heuristic scan is not malware certification.",
+  "windows_executable_tested": false,
+  "connected_writes": 0,
+  "emails_sent": 0
+}

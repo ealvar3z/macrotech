@@ -1,0 +1,6 @@
+September 12, 2026
+python3 -m unittest discover -s tests -p test_connection_prep.py -v
+2 tests passed. Google API calls mocked; no credentials or messages used.
+python3 connection_readiness.py
+Exit 2 as expected: connected approval testing blocked.
+No full regression suite, Windows build, or live connection testing performed for this preparation branch.

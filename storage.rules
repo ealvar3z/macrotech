@@ -1,0 +1,16 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function signedIn() { return request.auth != null; }
+    function leader() { return request.auth.token.role in ['CEO', 'APPROVER', 'ADMIN']; }
+    function quote(quoteId) {
+      return firestore.get(/databases/(default)/documents/quotations/$(quoteId));
+    }
+    match /quotation-files/{quoteId}/{fileName} {
+      allow read: if signedIn() && (leader() || quote(quoteId).data.ownerUid == request.auth.uid);
+      // Approved PDFs are uploaded by a trusted backend using the Admin SDK.
+      // Customer attachment upload remains parked and is not opened prematurely.
+      allow write: if false;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function role() { return request.auth.token.role; }
+    function leader() { return role() in ['CEO', 'APPROVER', 'ADMIN']; }
+    function ownsQuote() { return resource.data.ownerUid == request.auth.uid; }
+    function isEmployeeEditableState(state) {
+      return state in ['RFQ_RECEIVED', 'QUOTATION_DRAFT'];
+    }
+    function employeeKeptProtectedFields() {
+      return request.resource.data.internalApproval == resource.data.internalApproval
+        && request.resource.data.approvedBy == resource.data.approvedBy
+        && request.resource.data.approvedAt == resource.data.approvedAt
+        && request.resource.data.discountStatus == resource.data.discountStatus
+        && request.resource.data.discountAmount == resource.data.discountAmount
+        && request.resource.data.discountApprovedBy == resource.data.discountApprovedBy
+        && request.resource.data.discountApprovedAt == resource.data.discountApprovedAt
+        && request.resource.data.qCode == resource.data.qCode;
+    }
+    match /users/{uid} {
+      allow read: if signedIn() && (request.auth.uid == uid || leader());
+      allow write: if signedIn() && role() in ['CEO', 'ADMIN'];
+    }
+    match /quotations/{quoteId} {
+      allow create: if signedIn()
+        && request.resource.data.ownerUid == request.auth.uid
+        && isEmployeeEditableState(request.resource.data.status)
+        && (!('qCode' in request.resource.data) || request.resource.data.qCode == null);
+      allow read: if signedIn() && (resource.data.ownerUid == request.auth.uid || leader());
+      allow update: if signedIn() && (
+        leader()
+        || (
+          ownsQuote()
+          && isEmployeeEditableState(resource.data.status)
+          && isEmployeeEditableState(request.resource.data.status)
+          && employeeKeptProtectedFields()
+        )
+      );
+      allow delete: if false;
+    }
+    match /directoryRequests/{requestId} {
+      allow create: if signedIn() && request.resource.data.requestedByUid == request.auth.uid;
+      allow read: if signedIn();
+      allow update: if signedIn() && leader();
+      allow delete: if false;
+    }
+    match /notificationOutbox/{eventId} {
+      allow read: if signedIn() && leader();
+      allow write: if false;
+    }
+    match /auditEvents/{eventId} {
+      allow read: if signedIn() && role() == 'CEO';
+      allow write: if false;
+    }
+  }
+}

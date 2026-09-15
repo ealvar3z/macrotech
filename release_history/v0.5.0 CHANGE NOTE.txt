@@ -1,0 +1,17 @@
+MACROTECH QUOTATION PLATFORM - v0.5.0 DEMO
+FORMULA-SAFE DUMMY TRACKER
+
+- Rebuilt the existing Dummy Tracker as an empty structural test copy of the
+  current 2026 TR MARK-UP/ACTUAL layout. No real quotation records were copied.
+- Added hidden template version 2026-TR-MARK-UP-v1-2026-09-12.
+- Dummy writes now use only the verified template stored inside the Dummy; the
+  live 2026 TR is not read during synchronization and remains read-only.
+- Protected all canonical calculated columns from ordinary input writes,
+  including P and AT.
+- Verifies all required formulas, formatting, validation, row height, and Q-Code
+  after every write. Any mismatch triggers an exact pre-write rollback.
+- Fixed percentage and total-quantity UI formatting so binary floating-point
+  artifacts such as 7.000000001 are not shown.
+
+No Gmail, Firebase Hosting, Cloud Run, production deployment, or live Tracker
+write path was added or used.
