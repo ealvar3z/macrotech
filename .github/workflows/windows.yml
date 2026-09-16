@@ -1,0 +1,99 @@
+name: Tests and Windows executable
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-build-windows:
+    runs-on: windows-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install Python test dependencies
+        shell: pwsh
+        run: python -m pip install --requirement requirements.txt
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24.x'
+          cache: npm
+          cache-dependency-path: |
+            dashboard/package-lock.json
+            staging_backend/package-lock.json
+
+      - name: Install and build desktop dashboard
+        shell: pwsh
+        working-directory: dashboard
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+
+      - name: Install Chromium smoke-test dependencies
+        shell: pwsh
+        run: |
+          $playwrightRoot = Join-Path $env:RUNNER_TEMP 'macrotech-playwright'
+          New-Item -ItemType Directory -Force -Path $playwrightRoot | Out-Null
+          Push-Location $playwrightRoot
+          npm init --yes
+          npm install --no-audit --no-fund playwright
+          npx playwright install chromium
+          Pop-Location
+
+      - name: Run browser smoke test
+        shell: pwsh
+        run: |
+          $env:MACROTECH_PLAYWRIGHT = Join-Path $env:RUNNER_TEMP 'macrotech-playwright\node_modules\playwright'
+          node tests/readiness_ui.cjs
+
+      - name: Run Python tests
+        shell: pwsh
+        run: python -B evidence/run_offline.py .
+
+      - name: Install backend dependencies
+        shell: pwsh
+        working-directory: staging_backend
+        run: npm ci --no-audit --no-fund
+
+      - name: Run backend typechecks
+        shell: pwsh
+        working-directory: staging_backend
+        run: npm run typecheck
+
+      - name: Run backend tests
+        shell: pwsh
+        working-directory: staging_backend
+        run: npm test
+
+      - name: Build backend
+        shell: pwsh
+        working-directory: staging_backend
+        run: npm run build
+
+      - name: Build and self-test Windows executable
+        shell: pwsh
+        run: ./build_windows_exe.ps1
+
+      - name: Upload Windows executable bundle
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: macrotech-windows-executable
+          path: READY_TO_TEST
+          if-no-files-found: error
+          retention-days: 14
