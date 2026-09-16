@@ -131,8 +131,16 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create $env:GITHUB_REF_NAME $env:RELEASE_ARCHIVE $env:RELEASE_CHECKSUM `
-            --repo $env:GITHUB_REPOSITORY `
-            --verify-tag `
-            --title "Macrotech Windows $env:MACROTECH_VERSION" `
-            --generate-notes
+          $releaseArgs = @(
+            $env:GITHUB_REF_NAME,
+            $env:RELEASE_ARCHIVE,
+            $env:RELEASE_CHECKSUM,
+            '--repo', $env:GITHUB_REPOSITORY,
+            '--verify-tag',
+            '--title', "Macrotech Windows $env:MACROTECH_VERSION",
+            '--generate-notes'
+          )
+          if ($env:MACROTECH_VERSION -match '(?i)(alpha|beta|rc|pre)') {
+            $releaseArgs += '--prerelease'
+          }
+          gh release create @releaseArgs
