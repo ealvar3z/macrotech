@@ -1,0 +1,138 @@
+name: Windows distribution release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release-windows:
+    runs-on: windows-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Check out tagged source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify release tag matches VERSION
+        shell: pwsh
+        run: |
+          $version = (Get-Content VERSION -Raw).Trim()
+          $expectedTag = "v$version"
+          if ($env:GITHUB_REF_NAME -ne $expectedTag) {
+            throw "Release tag '$env:GITHUB_REF_NAME' does not match VERSION '$version'. Expected '$expectedTag'."
+          }
+          "MACROTECH_VERSION=$version" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install Python test dependencies
+        shell: pwsh
+        run: python -m pip install --requirement requirements.txt
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24.x'
+          cache: npm
+          cache-dependency-path: |
+            dashboard/package-lock.json
+            staging_backend/package-lock.json
+
+      - name: Install and build desktop dashboard
+        shell: pwsh
+        working-directory: dashboard
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+
+      - name: Install Chromium smoke-test dependencies
+        shell: pwsh
+        run: |
+          $playwrightRoot = Join-Path $env:RUNNER_TEMP 'macrotech-playwright'
+          New-Item -ItemType Directory -Force -Path $playwrightRoot | Out-Null
+          Push-Location $playwrightRoot
+          npm init --yes
+          npm install --no-audit --no-fund playwright
+          npx playwright install chromium
+          Pop-Location
+
+      - name: Run browser smoke test
+        shell: pwsh
+        run: |
+          $env:MACROTECH_PLAYWRIGHT = Join-Path $env:RUNNER_TEMP 'macrotech-playwright\node_modules\playwright'
+          node tests/readiness_ui.cjs
+
+      - name: Run Python tests
+        shell: pwsh
+        run: python -B evidence/run_offline.py .
+
+      - name: Install backend dependencies
+        shell: pwsh
+        working-directory: staging_backend
+        run: npm ci --no-audit --no-fund
+
+      - name: Run backend typechecks
+        shell: pwsh
+        working-directory: staging_backend
+        run: npm run typecheck
+
+      - name: Run backend tests
+        shell: pwsh
+        working-directory: staging_backend
+        run: npm test
+
+      - name: Build backend
+        shell: pwsh
+        working-directory: staging_backend
+        run: npm run build
+
+      - name: Build and self-test Windows executable
+        shell: pwsh
+        run: ./build_windows_exe.ps1
+
+      - name: Package distribution ZIP and checksums
+        shell: pwsh
+        run: |
+          $exe = Join-Path $env:GITHUB_WORKSPACE 'READY_TO_TEST\Macrotech Quotation Pilot Demo\Macrotech Quotation Pilot Demo.exe'
+          if (-not (Test-Path $exe -PathType Leaf)) {
+            throw "The verified Windows executable was not found at '$exe'."
+          }
+          $archiveName = "Macrotech-Windows-$($env:GITHUB_REF_NAME).zip"
+          $archive = Join-Path $env:GITHUB_WORKSPACE $archiveName
+          if (Test-Path $archive) { Remove-Item -Force $archive }
+          Compress-Archive -Path (Join-Path $env:GITHUB_WORKSPACE 'READY_TO_TEST') -DestinationPath $archive -CompressionLevel Optimal
+          $archiveHash = (Get-FileHash -Algorithm SHA256 $archive).Hash.ToLowerInvariant()
+          $checksum = "${archive}.sha256"
+          "$archiveHash  $archiveName" | Set-Content -Encoding ASCII $checksum
+          $verifyRoot = Join-Path $env:RUNNER_TEMP 'macrotech-distribution-check'
+          if (Test-Path $verifyRoot) { Remove-Item -Recurse -Force $verifyRoot }
+          Expand-Archive -Path $archive -DestinationPath $verifyRoot
+          if (-not (Get-ChildItem $verifyRoot -Filter '*.exe' -Recurse -File)) {
+            throw 'The distribution ZIP did not contain a Windows executable.'
+          }
+          "RELEASE_ARCHIVE=$archive" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          "RELEASE_CHECKSUM=$checksum" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          Write-Host "Created $archive"
+          Write-Host "SHA256: $archiveHash"
+
+      - name: Publish GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create $env:GITHUB_REF_NAME $env:RELEASE_ARCHIVE $env:RELEASE_CHECKSUM `
+            --repo $env:GITHUB_REPOSITORY `
+            --verify-tag `
+            --title "Macrotech Windows $env:MACROTECH_VERSION" `
+            --generate-notes
